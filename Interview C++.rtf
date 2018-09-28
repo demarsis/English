@@ -1,0 +1,441 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1049{\fonttbl{\f0\fnil\fcharset0 Verdana;}{\f1\fnil\fcharset204 Verdana;}{\f2\fnil\fcharset1 Cambria Math;}{\f3\fnil Verdana;}{\f4\fnil\fcharset0 Cambria Math;}}
+{\*\generator Riched20 10.0.17134}{\*\mmathPr\mmathFont2\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sl276\slmult1\qj\f0\fs20\lang9\par
+\b What is Object Oriented Programming?\par
+\b0 Object-oriented programming (or OOP) is a programming paradigm or style of programming. It relies on the concept of objects, which are abstract entities that consist of internal state (also known variously as attributes, properties, or instance variables), as well as behaviour (the functions or methods that act on the internal state).\par
+\par
+\b What are main features of OOP?\par
+\b0 Encapsulation\par
+Inheritance\par
+Polymorphism\par
+Abstraction\par
+\par
+\b What is encapsulation?\par
+\b0\lang1033 Encapsulation is containing and hiding information about an object, such as internal data structures and code. Encapsulation isolates the internal complexity of an object's operation from the rest of the application.\par
+\par
+\b What is inheritance?\par
+\b0 Inheritance allows one class to reuse the state and behavior of another class. The derived class inherits the properties and method implementations of the base class and extends it by overriding methods and adding additional properties and methods.\par
+\par
+\b What is \lang9 polymorphism\lang1033 ?\par
+\b0 Polymorphism is a feature of OOPs that allows the object to behave differently in different conditions. In C++ we have two types of polymorphism:\par
+- Compile time polymorphism is based on function and operator overloading.\par
+- Runtime Polymorphism is based on function overriding.\par
+\par
+\b What is a\lang9 bstraction?\lang1033\par
+\b0 Abstraction refers to hiding the internal implementation and exhibiting only the necessary details. Through the process of abstraction, a programmer hides all but the relevant data about an object in order to reduce complexity and increase efficiency.\par
+\par
+\b What is a class?\par
+\b0 Class is a blue print which reflects the entities attributes and actions. Technically defining a class is designing an user defined data type.\par
+\par
+\b What is an abstract class in C++?\par
+\b0 A class with at least one pure virtual function is called as abstract class. We cannot instantiate an abstract class.\par
+\par
+\b What is a pure virtual function?\par
+\b0 A virtual function with no function body and assigned with a value zero is called as pure virtual function.\par
+\par
+\b What is an object?\par
+\b0 An instance of the class is called as object.\par
+\par
+\b List the types of inheritance supported in C++.\par
+\ul\b0 Single Inheritance\ulnone . A derived class with only one base class is called single inheritance.\par
+\ul Multilevel Inheritance\ulnone . A derived class with one base class and that base class is a derived class of another is called multilevel inheritance.\par
+\ul Multiple Inheritance\ulnone . A derived class with multiple base class is called multiple inheritance.\par
+\ul Heirarchical Inheritance\ulnone . Multiple derived classes with same base class is called hierarchical inheritance.\par
+\ul Hybrid Inheritance\ulnone . Combination of multiple and hierarchical inheritance is called hybrid inheritance.\par
+\ul Multipath Inheritance\ulnone . A derived class with two base classes and these two base classes have one common base class is called multipath inheritance.\par
+\par
+\b What is Access Modifiers in a class in C++?\par
+\b0 Access modifiers (or Access Specifiers) in a class are used to set the accessibility of the class members. There are 3 types of access modifiers available in C++:\par
+\ul Public\ulnone . All the class members declared under public will be available to everyone.\par
+\ul Private\ulnone . The class members declared as private can be accessed only by the functions inside the class. \par
+\ul Protected\ulnone . Protected access modifier is similar to that of private access modifiers, the difference is that the class member declared as Protected are inaccessible outside the class but they can be accessed by any subclass (derived class) of that class.\par
+\par
+\b What is an inline function?\par
+\b0 If a function is inline, the compiler places a copy of the code of that function at each point where the function is called at compile time. If function is big (in term of executable instruction etc) then, compiler can ignore the \ldblquote inline\rdblquote  request and treat the function as normal function.\par
+\par
+\b What is a reference variable in C++?\par
+\b0 A reference variable is an alias name for the existing variable. Which mean both the variable name and reference variable point to the same memory location.\par
+\par
+\b What is role of static keyword?\par
+\ul\b0 Static global variable\ulnone . A variable declared as static at the top level of a source file is only visible throughout that file.\par
+\ul Static function\ulnone . Static function - a function declared as static at the top level of a source file - is only visible throughout that file.\par
+\ul Static local variables\ulnone . A variable declared static within the body of a function maintains its value between invocations of the function.\par
+\ul Static member variables\ulnone . Static data members of class are those members which are shared by all the objects. Static member variables (data members) are not initialied using constructor, because these are not dependent on object initialization.\par
+\ul Static method\ulnone . Static method - a method declared as static inside a class definition - are meant to be relevant to all instances of a class rather than any specific instance.\par
+\par
+\b What are the operators used to access the class members?\par
+\b0 The pointer-to-member operators, .* and ->* (dot and arrow operator).\par
+\par
+\b What is function overloading?\par
+\b0 Overloaded functions - functions having same name but different arguments. Overloaded functions may or may not have different return type.\par
+\par
+\b\f1\lang1049 What is function overriding?\par
+\b0 Function Overriding\f0\lang1033  - i\f1\lang1049 t is the redefinition of base class function in its derived class with same signature i.e return type and parameters.\par
+\par
+\b\f0\lang1033 Do we have a String primitive data type in C++?\par
+\b0 No, it\rquote s a class from standart library.\par
+\par
+\b When a class member is defined outside the class, which operator can be used to associate the function definition to a particular class?\par
+\b0 Scope resolution operator, double colon operator (::)\par
+\par
+\b What is constructor?\par
+\b0 A constructor is a member function of a class which initializes objects of a class. In C++, Constructor is automatically called when object (instance of class) create. Features: \par
+\f1\lang1049 - \f0\lang1033 Constructor has same name as the class itself\par
+\f1\lang1049 - \f0\lang1033 Constructors don\rquote t have return type\par
+\f1\lang1049 - \f0\lang1033 A constructor is automatically called when an object is created.\par
+\f1\lang1049 - \f0\lang1033 If we do not specify a constructor, C++ compiler generates a default constructor for us\par
+Types of Constructors:\par
+\ul Default Constructor\ulnone . Default constructor is the constructor which doesn\rquote t take any argument. It has no parameters. Even if we do not define any constructor explicitly, the compiler will automatically provide a default constructor implicitly.\par
+\ul Parameterized Constructor\ulnone . A constructor which has parameters is called parameterized constructor.\par
+\ul Copy Constructor\ulnone . A copy constructor is a member function which initializes an object using another object of the same class.\par
+\ul Move constructor\ulnone . A move constructor is a constructor whose first parameter is rvalue-reference.\par
+\par
+\b What is destructor?\par
+\b0 A destructor is a special member function that is called when the lifetime of an object ends. The purpose of the destructor is to free the resources that the object may have acquired during its lifetime.\par
+It cannot be overloaded and the only form is without the parameters.\par
+\par
+\b Virtual destructor\par
+\b0 Deleting a derived class object using a pointer to a base class that has a non-virtual destructor results in undefined behavior. To correct this situation, the base class should be defined with a virtual destructor.\par
+\par
+\b Which operator can be used in C++ to allocate dynamic memory?\par
+\b0 The new operator provides dynamic storage allocation.\par
+\par
+\b What is the purpose of \lquote delete\rquote  operator?\par
+\b0 delete operator is used to release the dynamic memory which was created using new operator.\par
+\par
+\b What is a friend function?\par
+\b0 A friend function of a class is defined outside that class' scope but it has the right to access all private and protected members of the class.\par
+\par
+\b Does C++ supports exception handling?\par
+\b0 C++ exception handling is built upon three keywords: try, catch, and throw.\par
+\ul throw\ulnone  \f2\u8722?\f0  A program throws an exception when a problem shows up. This is done using a throw keyword.\par
+\ul catch\ulnone  \f2\u8722?\f0  A program catches an exception with an exception handler at the place in a program where you want to handle the problem. The catch keyword indicates the catching of an exception.\par
+\ul try\ulnone  \f2\u8722?\f0  A try block identifies a block of code for which particular exceptions will be activated. It's followed by one or more catch blocks.\lang1033\par
+\par
+\b What is the 'this' pointer?\par
+\b0\lquote this\rquote  pointer is a constant pointer that holds the memory address of the current object. \lquote this\rquote  pointer is not available in static member functions as static member functions can be called without any object (with class name).\par
+\par
+\b\f1\lang1049 What is the difference between the keywords struct and class in C++?\par
+\b0 The only difference between a struct and class in C++ is the default accessibility of member variables and methods. In a struct they are public; in a class they are private.\par
+\par
+\b What is a namespace?\par
+\b0 A namespace is the logical division of the code which can be used to resolve the name conflict of the identifiers by placing them under different name space.\par
+\par
+\b\f0\lang1033 What is a template?\par
+\b0 A template is a C++ programming feature that permits function and class operations with generic types, which allows functionality with different data types without rewriting entire code blocks for each type.\par
+\par
+\b\f1\lang1049 What is a class template?\par
+\b0 A class template defines a family of classes.\f0\lang1033  \f1\lang1049 A class template provides a specification for generating classes based on parameters.\f0\lang1033  \f1\lang1049 A class template is instantiated by passing a given set of types to it as template arguments.\par
+\par
+\b What is a \f0\lang1033 function\f1\lang1049  template?\b0\par
+\f0\lang1033 A function template defines a family of functions. A function template behaves like a function except that the template can have arguments of many different types.\par
+\par
+\b\f1\lang1049 What is a \f0\lang1033 function\f1\lang1049  template?\b0\par
+\f0\lang1033 This allows a variable value to be computed at compile time and used as such without casting it.\par
+\f1\lang1049\par
+\b\f0\lang1033 What are template parameters?\f1\lang1049\par
+\b0 Templates are parametrized by one or more template parameters, of three kinds: type template parameters, non-type template parameters, and template template parameters.\par
+\par
+\b\f0\lang1033 What is a template parameter pack?\par
+\b0 A template parameter pack is a template parameter that accepts zero or more template arguments.\par
+\f1\lang1049\par
+\b\f0\lang1033 What are template keywords in C++?\f1\lang1049\par
+\b0\f0\lang1033 template, typename, class\f1\lang1049\par
+\par
+\b\f0\lang1033 Difference between typename and class in templates?\f1\lang1049\par
+\b0\f0\lang1033 There is no semantic difference between class and typename in a template-parameter.\par
+\par
+\b Why a non-type template parameter should be a constant integral expression?\par
+\b0 Non-constant expressions can't be parsed and substituted during compile-time.\par
+\par
+\b When should we use the register storage specifier?\par
+\b0 The register storage class specifier indicates to the compiler that the object should be stored in a machine register. The register storage class specifier is typically specified for heavily used variables, such as a loop control variable, in the hopes of enhancing performance by minimizing access time. However, the compiler is not required to honor this request.\par
+\par
+\b Where an automatic variable is stored?\par
+\b0 Every local variable by default being an auto variable is stored in stack memory\par
+\par
+\b What is a container class?\par
+\b0 Container class is a class designed to hold and organize multiple instances of another type (either another class, or a fundamental type). By far the most commonly used container in programming is the array, which you have already seen many examples of. Although C++ has built-in array functionality, programmers will often use an array container class (std::array or std::vector) instead because of the additional benefits they provide.\par
+\par
+\b What is a preprocessor?\par
+\b0 Preprocessor programs provides preprocessors directives which tell the compiler to preprocess the source code before compiling. All of these preprocessor directive begins with a '#' (hash) symbol.\par
+\par
+\b What are the different ways of passing parameters to the functions? Which to use when?\par
+\b0 Call by value \f2\u8722?\f0  we send only values to the function as parameters.\par
+Call by address \f2\u8722?\f0  we send address of the actual parameters instead of values.\par
+Call by reference \f2\u8722?\f0  the actual parameters are received with the C++ new reference variables as formal parameters.\par
+\par
+\b\f1\lang1049 Can we resize the allocated memory which was allocated using \f3\lquote\f1 new\f3\rquote\f1  operator?\par
+\b0 No, there is no such provision available.\par
+\f0\par
+\b\f1\lang1049 Which operator can be used to determine the size of a data type/class or variable/object?\par
+\b0 sizeof\par
+\f0\par
+\b\f1\lang1049 What is recursion?\par
+\b0 Function calling itself is called as recursion.\par
+\f0\par
+\b\f1\lang1049 What is the difference between delete and delete[]?\par
+\b0\f0\lang1033 The delete operator deallocates memory and calls the destructor for a single object created with new.\par
+The delete [] operator deallocates memory and calls destructors for an array of objects created with new [].\par
+\par
+\b\f1\lang1049 Is it legal to assign a base class object to a derived class pointer?\par
+\b0 No, it will be error as the compiler fails to do conversion.\par
+\f0\lang1033\par
+\b\f1\lang1049 What is the full form of STL?\par
+\b0 Standard template library\par
+\par
+\b What is the use of the keyword \f3\lquote\f1 using\f3\rquote\f1 ?\par
+\b0 It is used to specify the namespace being used in.\par
+\f0 A\f4  \f0 typedef\f4 -\f0 name\f4  \f0 can\f4  \f0 also\f4  \f0 be\f4  \f0 introduced\f4  \f0 by\f4  \f0 an\f4  \f0 alias\f4 -\f0 declaration\f4 .\par
+\par
+\b\f1\lang1049 What is difference between including the header file with-in angular braces < > and double quotes \f3\ldblquote\f1  \f3\ldblquote\f0\lang1033 ?\f1\lang1049\par
+\b0 If a header file is included with in <> then the compiler searches for the particular header file only with in the built in include path. If a header file is included with in \f3\ldblquote\f1  \f3\ldblquote\f1 , then the compiler searches for the particular header file first in the current working directory, if not found then in the built in include path\f0\lang1033 .\par
+\par
+\b\f1\lang1049 What is the difference between variable declaration\f0\lang1033 , \f1\lang1049 definition\f0\lang1033 , initialization and assignment\f1\lang1049 ?\par
+\b0 Declaration \par
+\par
+\f4\par
+\f0\par
+\par
+\lang1033\par
+\par
+What is a token?\par
+A C++ program consists of various tokens and a token is either a keyword, an identifier, a constant, a string literal, or a symbol.\par
+\par
+\par
+\par
+Explain the purpose of the keyword volatile.\par
+Declaring a variable volatile directs the compiler that the variable can be changed externally. Hence avoiding compiler optimization on the variable reference.\par
+\par
+\par
+What is a storage class?\par
+Storage class specifies the life or scope of symbols such as variable or functions.\par
+\par
+Mention the storage classes names in C++.\par
+The following are storage classes supported in C++\par
+auto, static, extern, register and mutable\par
+\par
+What is the role of mutable storage class specifier?\par
+A constant class object\rquote s member variable can be altered by declaring it using mutable storage class specifier. Applicable only for non-static and non-constant member variable of the class.\par
+\par
+Distinguish between shallow copy and deep copy.\par
+Shallow copy does memory dumping bit-by-bit from one object to another. Deep copy is copy field by field from object to another. Deep copy is achieved using copy constructor and or overloading assignment operator.\par
+\par
+Name the data type which can be used to store wide characters in C++.\par
+wchar_t\par
+\par
+\par
+Can we initialize a class/structure member variable as soon as the same is defined?\par
+No, Defining a class/structure is just a type definition and will not allocated memory for the same.\par
+\par
+What is the data type to store the Boolean value?\par
+bool, is the new primitive data type introduced in C++ language.\par
+\par
+What is operator overloading?\par
+Defining a new job for the existing operator w.r.t the class objects is called as operator overloading.\par
+\par
+\par
+Name the default standard streams in C++.\par
+cin, cout, cerr and clog.\par
+\par
+Which access specifier/s can help to achive data hiding in C++?\par
+Private & Protected.\par
+\par
+\par
+Can I use \lquote delete\rquote  operator to release the memory which was allocated using malloc() function of C language?\par
+No, we need to use free() of C language for the same.\par
+\par
+What is a copy constructor?\par
+A copy constructor is the constructor which take same class object reference as the parameter. It gets automatically invoked as soon as the object is initialized with another object of the same class at the time of its creation.\par
+\par
+Explain the pointer \f3\endash\f1\lang1049  this.\par
+This, is the pointer variable of the compiler which always holds the current active object\f3\rquote\f1 s address.\par
+\par
+\par
+Can we implement all the concepts of OOPS using the keyword struct?\par
+Yes.\par
+\par
+What is the block scope variable in C++?\par
+A variable whose scope is applicable only within a block is said so. Also a variable in C++ can be declared anywhere within the block.\par
+\par
+What is the role of the file opening mode ios::trunk?\par
+If the file already exists, its content will be truncated before opening the file.\par
+\par
+What is the scope resolution operator?\par
+The scope resolution operator is used to\par
+\par
+Resolve the scope of global variables.\par
+To associate function definition to a class if the function is defined outside the class.\par
+\par
+What are command line arguments?\par
+The arguments/parameters which are sent to the main() function while executing from the command line/console are called so. All the arguments sent are the strings only.\par
+\par
+\par
+How can we catch all kind of exceptions in a single catch block?\par
+The catch block with ellipses as follows\par
+\par
+catch(\'85) \par
+\{\par
+\}\par
+What is keyword auto for?\par
+By default every local variable of the function is automatic (auto). In the below function both the variables \f3\lquote\f1 i\f3\rquote\f1  and \f3\lquote\f1 j\f3\rquote\f1  are automatic variables.\par
+\par
+void f() \par
+\{\par
+   int i;\par
+  \par
+   auto int j;\par
+\}\par
+NOTE \f2\u8722?\f0  A global variable can\rquote t be an automatic variable.\par
+\par
+\par
+What is the purpose of extern storage specifier.\par
+Used to resolve the scope of global symbol\par
+\par
+#include <iostream>\par
+\par
+using namespace std;\tab\par
+main() \{\par
+   extern int i;\par
+      \par
+   cout<<i<<endl;\par
+\}\par
+int i = 20;\par
+What is the meaning of base address of the array?\par
+The starting address of the array is called as the base address of the array.\par
+\par
+\par
+Can a program be compiled without main() function?\par
+Yes, it can be but cannot be executed, as the execution requires main() function definition.\par
+\par
+\par
+What are command line arguments?\par
+The arguments which we pass to the main() function while executing the program are called as command line arguments. The parameters are always strings held in the second argument (below in args) of the function which is array of character pointers. First argument represents the count of arguments (below in count) and updated automatically by operating system.\par
+\par
+main( int count, char *args[]) \{\par
+\}\par
+\par
+What is reminder for 5.0 % 2?\par
+Error, It is invalid that either of the operands for the modulus operator (%) is a real number.\par
+\par
+Which compiler switch to be used for compiling the programs using math library with g++ compiler?\par
+Opiton \f3\endash\f1\lang1049 lm to be used as > g++ \f3\endash\f1 lm <file.cpp>\par
+\par
+Who designed C++ programming language?\par
+Bjarne Stroustrup.\par
+\par
+\par
+How can we refer to the global variable if the local and the global variable names are same?\par
+We can apply scope resolution operator (::) to the for the scope of global variable.\par
+\par
+What are valid operations on pointers?\par
+The only two permitted operations on pointers are\par
+\par
+Comparision ii) Addition/Substraction (excluding void pointers)\par
+\par
+\par
+What is the first string in the argument vector w.r.t command line arguments?\par
+Program name.\par
+\par
+What is the maximum length of an identifier?\par
+Ideally it is 32 characters and also implementation dependent.\par
+\par
+What is the default function call method?\par
+By default the functions are called by value.\par
+\par
+What are available mode of inheritance to inherit one class from another?\par
+Public, private & protected\par
+\par
+\par
+Does an abstract class in C++ need to hold all pure virtual functions?\par
+Not necessarily, a class having at least one pure virtual function is abstract class too.\par
+\par
+\par
+What happens if an exception is thrown outside a try block?\par
+The program shall quit abruptly.\par
+\par
+Are the exceptions and error same?\par
+No, exceptions can be handled whereas program cannot resolve errors.\par
+\par
+\par
+Which function is used to move the stream pointer for the purpose of reading data from stream?\par
+seekg()\par
+\par
+Which function is used to move the stream pointer for the purpose of writing data from stream?\par
+seekp()\par
+\par
+Are class functions taken into consideration as part of the object size?\par
+No, only the class member variables determines the size of the respective class object.\par
+\par
+Can we create and empty class? If so what would be the size of such object.\par
+We can create an empty class and the object size will be 1.\par
+\par
+What is \f3\lquote\f1 std\f3\rquote\f1 ?\par
+Default namespace defined by C++.\par
+\par
+\par
+What is \f3\lquote\f1 cout\f3\rquote\f1 ?\par
+cout is the object of ostream class. The stream \f3\lquote\f1 cout\f3\rquote\f1  is by default connected to console output device.\par
+\par
+What is \f3\lquote\f1 cin\f3\rquote\f1 ?\par
+cin is the object of istream class. The stream \f3\lquote\f1 cin\f3\rquote\f1  is by default connected to console input device.\par
+\par
+\par
+If a pointer declared for a class, which operator can be used to access its class members?\par
+Arrow (->) operator can be used for the same\par
+\par
+\par
+S++ or S = S+1, which can be recommended to increment the value by 1 and why?\par
+S++, as it is single machine instruction (INC) internally.\par
+\par
+What is the difference between actual and formal parameters?\par
+The parameters sent to the function at calling end are called as actual parameters while at the receiving of the function definition called as formal parameters.\par
+\par
+\par
+Which key word is used to perform unconditional branching?\par
+goto.\par
+\par
+Is 068 a valid octal number?\par
+No, it contains invalid octal digits.\par
+\par
+What is the purpose of #undef preprocessor?\par
+It will be used to undefine an existing macro definition.\par
+\par
+Can we nest multi line comments in a C++ code?\par
+No, we cannot.\par
+\par
+What is a virtual destructor?\par
+A virtual destructor ensures that the objects resources are released in the reverse order of the object being constructed w.r.t inherited object.\par
+\par
+What is the order of objects destroyed in the memory?\par
+The objects are destroyed in the reverse order of their creation.\par
+\par
+What is a friend class?\par
+A class members can gain accessibility over other class member by placing the class declaration prefixed with the keyword \f3\lquote\f1 friend\f3\rquote\f1  in the destination class.\par
+\par
+\b\f0\lang1033 What is big-endian and little-endian?\par
+\b0 Big-endian and little-endian are terms that describe the order in which a sequence of bytes are stored in computer memory. Big-endian is an order in which the "big end" (most significant value in the sequence) is stored first (at the lowest storage address). Little-endian is an order in which the "little end" (least significant value in the sequence) is stored first. For example, in a big-endian computer, the two bytes required for the hexadecimal number 4F52 would be stored as 4F52 in storage (if 4F is stored at storage address 1000, for example, 52 will be at address 1001). In a little-endian system, it would be stored as 524F (52 at address 1000, 4F at 1001).\par
+\par
+\b What's the difference between MSB and LSB?\par
+\b0 T\f1\lang1049 he most significant bit (MSB) is the bit which has the largest value in a multi-bit binary number.\f0\lang1033  T\f1\lang1049 he least significant bit is the bit which is farthest to the right and holds the least value in a multi-bit binary number.\par
+\par
+\par
+\f0\lang1033 === friend function\par
+=== friend class\par
+=== union\par
+=== raii\par
+=== rule of three\par
+=== rule of five\par
+=== Rule of zero\par
+\f1\lang1049 === Delegating constructors in c++\par
+=== Move Constructors and Move Assignment Operators \par
+=== \'ed\'e0\'f1\'eb\'e5\'e4\'ee\'e2\'e0\'ed\'e8\'e5 \'ea\'ee\'ed\'f1\'f2\'f0\'f3\'ea\'f2\'ee\'f0\'ee\'e2\f0\lang1033\par
+=== explicit, implicit constructors\par
+=== deleted constructors\par
+\f1\lang1049 === deducing template arguments\par
+=== \f0\lang1033 hangling pointer\par
+=== hangling reference\par
+=== class - const in function\par
+=== auto\f1\lang1049\par
+}
+ 
