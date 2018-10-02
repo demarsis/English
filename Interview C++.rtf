@@ -232,25 +232,20 @@ The goto statement gives power to jump to any part of program but, makes the log
 \b What is dynamic_cast conversion?\par
 \b0 Safely converts pointers and references to classes up, down, and sideways along the inheritance hierarchy.\par
 \par
-What is the difference between static_cast and dynamic_cast convertion?\par
+\b What is reinterpret_cast conversion?\par
+\b0 Allows any pointer to be converted into any other pointer type. Also allows any integral type to be converted into any pointer type and vice versa.\par
 \par
-\par
-What is reinterpret_cast conversion?\par
+\b What is the difference between static_cast and dynamic_cast convertion?\par
+\b0 dynamic_cast should be used for converting pointers/references within an inheritance hierarchy, static_cast should be used for ordinary type conversions.\par
 \par
 \b Explain the purpose of the keyword volatile.\par
 \b0 Declaring a variable volatile directs the compiler that the variable can be changed externally. Hence avoiding compiler optimization on the variable reference.\par
 \par
+\b What is a storage class?\par
+\b0 Storage class of a variable defines the lifetime and visibility of a variable. Lifetime means the duration till which the variable remains active and visibility defines in which module of the program the variable is accessible.\par
 \par
-\par
-\par
-\par
-\par
-What is a storage class?\par
-Storage class specifies the life or scope of symbols such as variable or functions.\par
-\par
-Mention the storage classes names in C++.\par
-The following are storage classes supported in C++\par
-auto, static, extern, register and mutable\par
+\b Mention the storage classes names in C++.\par
+\b0 There are five types of storage classes in C++. They are:\f1\lang1049  \f0\lang1033 automatic,\f1\lang1049  \f0\lang1033 external,\f1\lang1049  \f0\lang1033 static,\f1\lang1049  \f0\lang1033 register,\f1\lang1049  \f0\lang1033 mutable.\par
 \par
 What is the role of mutable storage class specifier?\par
 A constant class object\rquote s member variable can be altered by declaring it using mutable storage class specifier. Applicable only for non-static and non-constant member variable of the class.\par
