@@ -99,12 +99,6 @@ It cannot be overloaded and the only form is without the parameters.\par
 \b What is a friend function?\par
 \b0 A friend function of a class is defined outside that class' scope but it has the right to access all private and protected members of the class.\par
 \par
-\b Does C++ supports exception handling?\par
-\b0 C++ exception handling is built upon three keywords: try, catch, and throw.\par
-\ul throw\ulnone  \f2\u8722?\f0  A program throws an exception when a problem shows up. This is done using a throw keyword.\par
-\ul catch\ulnone  \f2\u8722?\f0  A program catches an exception with an exception handler at the place in a program where you want to handle the problem. The catch keyword indicates the catching of an exception.\par
-\ul try\ulnone  \f2\u8722?\f0  A try block identifies a block of code for which particular exceptions will be activated. It's followed by one or more catch blocks.\lang1033\par
-\par
 \b What is the 'this' pointer?\par
 \b0\lquote this\rquote  pointer is a constant pointer that holds the memory address of the current object. \lquote this\rquote  pointer is not available in static member functions as static member functions can be called without any object (with class name).\par
 \par
@@ -274,22 +268,28 @@ The goto statement gives power to jump to any part of program but, makes the log
 \b\f1\lang1049 Can we implement all the concepts of OOPS using the keyword struct?\par
 \b0 Yes.\par
 \par
-What is the block scope variable in C++?\par
-There are mainly two types of variable scopes\f0\lang1033 :\par
-Local Variables: \f1\lang1049\par
+\b What is the block scope variable in C++?\par
+\b0 An object has block scope if its declaration is located inside a block. An object with block scope is visible from the point where it is declared\f0\lang1033  (opening brace "\{")\f1\lang1049  to the closing brace \f0\lang1033 "\f1\lang1049\}\f0\lang1033 "\f1\lang1049  that terminates the block.\par
 \par
-What is the role of the file opening mode ios::trunk?\par
-If the file already exists, its content will be truncated before opening the file.\par
+\b What is the scope resolution operator?\par
+\b0 In C++, scope resolution operator is ::\f0\lang1033  (double colon)\f1\lang1049 . It is used for following purposes\f0\lang1033 :\par
+- To access a global variable when there is a local variable with same name.\par
+- \f1\lang1049 To define a function outside a class.\par
+\f0\lang1033 - \f1\lang1049 To access a class\rquote s static variables.\par
+\f0\lang1033 - In case of multiple Inheritance.\f1\lang1049\par
 \par
-What is the scope resolution operator?\par
-The scope resolution operator is used to\par
+\b What are command line arguments?\par
+\b0 Command-line arguments\f0\lang1033  \f1\lang1049 are passed to a program at runtime by the operating system when the program is requested by another program, such as a command interpreter ("shell") like cmd.exe on Windows or bash on Linux\f0\lang1033 . \f1\lang1049 All the arguments sent are the strings only.\f0\lang1033\par
 \par
-Resolve the scope of global variables.\par
-To associate function definition to a class if the function is defined outside the class.\par
+\b What is exception?\par
+\b0 A C++ exception is a response to an exceptional circumstance that arises while a program is running, such as an attempt to divide by zero. Exceptions provide a way to transfer control from one part of a program to another. C++ exception handling is built upon three keywords: try, catch, and throw.\f1\lang1049\par
 \par
-What are command line arguments?\par
-The arguments/parameters which are sent to the main() function while executing from the command line/console are called so. All the arguments sent are the strings only.\par
-\par
+\b\f0\lang1033 Does C++ supports exception handling?\par
+\b0 C++ exception handling is built upon three keywords: try, catch, and throw.\par
+\ul try\ulnone  \f2\u8722?\f0  A try block identifies a block of code for which particular exceptions will be activated. It's followed by one or more catch blocks.\ul\lang1033\par
+catch\ulnone  \f2\u8722?\f0  A program catches an exception with an exception handler at the place in a program where you want to handle the problem. The catch keyword indicates the catching of an exception.\par
+\ul\lang1033 throw\ulnone  \f2\u8722?\f0  A program throws an exception when a problem shows up. This is done using a throw keyword.\par
+\f1\lang1049\par
 \par
 How can we catch all kind of exceptions in a single catch block?\par
 The catch block with ellipses as follows\par
