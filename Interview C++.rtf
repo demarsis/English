@@ -56,13 +56,6 @@ Abstraction\par
 \b What is a reference variable in C++?\par
 \b0 A reference variable is an alias name for the existing variable. Which mean both the variable name and reference variable point to the same memory location.\par
 \par
-\b What is role of static keyword?\par
-\ul\b0 Static global variable\ulnone . A variable declared as static at the top level of a source file is only visible throughout that file.\par
-\ul Static function\ulnone . Static function - a function declared as static at the top level of a source file - is only visible throughout that file.\par
-\ul Static local variables\ulnone . A variable declared static within the body of a function maintains its value between invocations of the function.\par
-\ul Static member variables\ulnone . Static data members of class are those members which are shared by all the objects. Static member variables (data members) are not initialied using constructor, because these are not dependent on object initialization.\par
-\ul Static method\ulnone . Static method - a method declared as static inside a class definition - are meant to be relevant to all instances of a class rather than any specific instance.\par
-\par
 \b What are the operators used to access the class members?\par
 \b0 The pointer-to-member operators, .* and ->* (dot and arrow operator).\par
 \par
@@ -147,12 +140,6 @@ It cannot be overloaded and the only form is without the parameters.\par
 \par
 \b Why a non-type template parameter should be a constant integral expression?\par
 \b0 Non-constant expressions can't be parsed and substituted during compile-time.\par
-\par
-\b When should we use the register storage specifier?\par
-\b0 The register storage class specifier indicates to the compiler that the object should be stored in a machine register. The register storage class specifier is typically specified for heavily used variables, such as a loop control variable, in the hopes of enhancing performance by minimizing access time. However, the compiler is not required to honor this request.\par
-\par
-\b Where an automatic variable is stored?\par
-\b0 Every local variable by default being an auto variable is stored in stack memory\par
 \par
 \b What is a container class?\par
 \b0 Container class is a class designed to hold and organize multiple instances of another type (either another class, or a fundamental type). By far the most commonly used container in programming is the array, which you have already seen many examples of. Although C++ has built-in array functionality, programmers will often use an array container class (std::array or std::vector) instead because of the additional benefits they provide.\par
@@ -247,11 +234,27 @@ The goto statement gives power to jump to any part of program but, makes the log
 \b Mention the storage classes names in C++.\par
 \b0 There are five types of storage classes in C++. They are:\f1\lang1049  \f0\lang1033 automatic,\f1\lang1049  \f0\lang1033 external,\f1\lang1049  \f0\lang1033 static,\f1\lang1049  \f0\lang1033 register,\f1\lang1049  \f0\lang1033 mutable.\par
 \par
-What is the role of mutable storage class specifier?\par
-A constant class object\rquote s member variable can be altered by declaring it using mutable storage class specifier. Applicable only for non-static and non-constant member variable of the class.\par
+\b Where an automatic variable is stored?\par
+\b0 Every local variable by default being an auto variable is stored in stack memory.\par
 \par
-Distinguish between shallow copy and deep copy.\par
-Shallow copy does memory dumping bit-by-bit from one object to another. Deep copy is copy field by field from object to another. Deep copy is achieved using copy constructor and or overloading assignment operator.\par
+\b What is the purpose of extern storage specifier?\par
+\b0 The extern keyword tells the compiler that a variable is declared in another source module (outside of the current scope). The linker then finds this actual declaration and sets up the extern variable to point to the correct location.\par
+\par
+\b What is role of static keyword?\par
+\ul\b0 Static global variable\ulnone . A variable declared as static at the top level of a source file is only visible throughout that file.\par
+\ul Static function\ulnone . Static function - a function declared as static at the top level of a source file - is only visible throughout that file.\par
+\ul Static local variables\ulnone . A variable declared static within the body of a function maintains its value between invocations of the function.\par
+\ul Static member variables\ulnone . Static data members of class are those members which are shared by all the objects. Static member variables (data members) are not initialied using constructor, because these are not dependent on object initialization.\par
+\ul Static method\ulnone . Static method - a method declared as static inside a class definition - are meant to be relevant to all instances of a class rather than any specific instance.\par
+\par
+\b When should we use the register storage specifier?\par
+\b0 The register storage class specifier indicates to the compiler that the object should be stored in a machine register. The register storage class specifier is typically specified for heavily used variables, such as a loop control variable, in the hopes of enhancing performance by minimizing access time. However, the compiler is not required to honor this request.\par
+\par
+\b What is the role of mutable storage class specifier?\par
+\b0 If a data member is declared mutable, then it is legal to assign a value to this data member from a const member function.\par
+\par
+\b Distinguish between shallow copy and deep copy.\par
+\b0 Shallow copy\f1\lang1049  (also known as a \f0\lang1033 b\f1\lang1049 itwise copy)\f0\lang1033  does memory dumping bit-by-bit from one object to another. Deep copy (\f1\lang1049 also known as a \f0\lang1033 memberwise \f1\lang1049 copy)\f0\lang1033  is copy field by field from object to another. Deep copy is achieved using copy constructor and or overloading assignment operator.\par
 \par
 Name the data type which can be used to store wide characters in C++.\par
 wchar_t\par
@@ -321,18 +324,6 @@ void f() \par
 NOTE \f2\u8722?\f0  A global variable can\rquote t be an automatic variable.\par
 \par
 \par
-What is the purpose of extern storage specifier.\par
-Used to resolve the scope of global symbol\par
-\par
-#include <iostream>\par
-\par
-using namespace std;\tab\par
-main() \{\par
-   extern int i;\par
-      \par
-   cout<<i<<endl;\par
-\}\par
-int i = 20;\par
 What is the meaning of base address of the array?\par
 The starting address of the array is called as the base address of the array.\par
 \par
