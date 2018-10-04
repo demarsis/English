@@ -307,34 +307,38 @@ catch\ulnone  \f2\u8722?\f0  A program catches an exception with an exception ha
 \b0 Within standard C++ a main function is required.\par
 \par
 \b What is remainder\f1\lang1049  \f0\lang1033 for 5.0 % 2?\par
-\b0 ////////////////////////////////////////////////////////\par
-?????????????????????\par
-Error, It is invalid that either of the operands for the modulus operator (%) is a real number.\par
+\b0 Error. The modulus operator cannot be used for floating-type variables\par
 \par
-Which compiler switch to be used for compiling the programs using math library with g++ compiler?\par
-Opiton \f3\endash\f1\lang1049 lm to be used as > g++ \f3\endash\f1 lm <file.cpp>\par
+\b Which compiler switch to be used for compiling the programs using math library with g++ compiler?\par
+\b0\f1\lang1049 g++ \f3\endash\f1 lm <file.cpp>\par
+That's a linker option. It tells the linker to link with (-l) the m library. That's the math library.\par
 \par
-Who designed C++ programming language?\par
-Bjarne Stroustrup.\par
+\b Who designed C++ programming language?\par
+\b0 Bjarne Stroustrup.\par
 \par
+\b How can we refer to the global variable if the local and the global variable names are same?\par
+\b0 We can apply scope resolution operator (::) to the for the scope of global variable.\par
 \par
-How can we refer to the global variable if the local and the global variable names are same?\par
-We can apply scope resolution operator (::) to the for the scope of global variable.\par
+\b\f0\lang1033 What is pointer?\par
+\b0 Pointer is a variable that stores the address of another variable.\par
 \par
-What are valid operations on pointers?\par
-The only two permitted operations on pointers are\par
+\b What is "address of" operator?\par
+\b0 The \lang9 ampersand\lang1033  (&) is a unary operator that returns the memory address of its operand. It should be read as "the address of".\par
 \par
-Comparision ii) Addition/Substraction (excluding void pointers)\par
+\b What is indirection operator?\par
+\b0\f1\lang1049 It is a unary operator that returns the value of the variable located at the address specified by its operand.\par
 \par
-\par
-What is the first string in the argument vector w.r.t command line arguments?\par
-Program name.\par
-\par
-What is the maximum length of an identifier?\par
-Ideally it is 32 characters and also implementation dependent.\par
-\par
-What is the default function call method?\par
-By default the functions are called by value.\par
+\b What are valid operations on pointers?\par
+\ul\b0 Creation\par
+Assignment\ulnone\par
+\ul Arithmetic\ulnone\par
+\f0\lang1033\tab - Incrementing and decrementing a pointer.\par
+\tab - Adding or subtracting an integer.\f1\lang1049\par
+\ul Comparison\ulnone\par
+\f0\lang1033\tab - Pointers to entries of the same array can be compared using ==, !=, \tab\tab <, >, etc.\par
+\tab - Any pointer can be compared with 0.\par
+\ul Indirection\ulnone\par
+\ul Indexing\ulnone\f1\lang1049\par
 \par
 What are available mode of inheritance to inherit one class from another?\par
 Public, private & protected\par
