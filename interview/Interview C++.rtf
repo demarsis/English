@@ -97,7 +97,12 @@ It cannot be overloaded and the only form is without the parameters.\par
 \b0 delete operator is used to release the dynamic memory which was created using new operator.\par
 \par
 \b What is a friend function?\par
-\b0 A friend function of a class is defined outside that class' scope but it has the right to access all private and protected members of the class.\par
+\b0 Friend function can be given special grant to access private and protected members. A friend function can be:\par
+- A method of another class\par
+- A global function\par
+\par
+\b\f1\lang1049 What is a friend class?\par
+\b0 A friend class can access private and protected members of other class in which it is declared as friend.\f0\lang1033\par
 \par
 \b What is the 'this' pointer?\par
 \b0\lquote this\rquote  pointer is a constant pointer that holds the memory address of the current object. \lquote this\rquote  pointer is not available in static member functions as static member functions can be called without any object (with class name).\par
@@ -340,82 +345,60 @@ Assignment\ulnone\par
 \ul Indirection\ulnone\par
 \ul Indexing\ulnone\f1\lang1049\par
 \par
-What are available mode of inheritance to inherit one class from another?\par
-Public, private & protected\par
+\b What are available mode of inheritance to inherit one class from another?\par
+\b0 Public, private \f0\lang1033 and\f1\lang1049  protected\f0\lang1033 .\f1\lang1049\par
 \par
 \par
-Does an abstract class in C++ need to hold all pure virtual functions?\par
-Not necessarily, a class having at least one pure virtual function is abstract class too.\par
+\b Does an abstract class in C++ need to hold all pure virtual functions?\par
+\b0 Not necessarily, a class having at least one pure virtual function is abstract class too.\par
 \par
+\b What happens if an exception is thrown outside a try block?\par
+\b0 An exception that isn't caught will always terminate the program\f0\lang1033 .\f1\lang1049\par
 \par
-What happens if an exception is thrown outside a try block?\par
-The program shall quit abruptly.\par
+\b Are class functions taken into consideration as part of the object size?\par
+\b0 No, only the class member variables determines the size of the respective class object.\par
 \par
-Are the exceptions and error same?\par
-No, exceptions can be handled whereas program cannot resolve errors.\par
+\b Can we create and empty class? If so what would be the size of such object.\par
+\b0 We can create an empty class and the object size will be 1.\par
 \par
+\b What is std?\par
+\b0\f0\lang1033 Std is namespace of the C++ standard library.\f1\lang1049\par
 \par
-Which function is used to move the stream pointer for the purpose of reading data from stream?\par
-seekg()\par
+\b What is cout?\par
+\b0 cout is the object of ostream class. The stream \f3\lquote\f1 cout\f3\rquote\f1  is by default connected to console output device.\par
 \par
-Which function is used to move the stream pointer for the purpose of writing data from stream?\par
-seekp()\par
+\b What is cin?\par
+\b0 cin is the object of istream class. The stream \f3\lquote\f1 cin\f3\rquote\f1  is by default connected to console input device.\par
 \par
-Are class functions taken into consideration as part of the object size?\par
-No, only the class member variables determines the size of the respective class object.\par
+\b If a pointer declared for a class, which operator can be used to access its class members?\par
+\b0 Arrow (->) operator can be used\f0\lang1033 .\f1\lang1049\par
 \par
-Can we create and empty class? If so what would be the size of such object.\par
-We can create an empty class and the object size will be 1.\par
+\b What is the difference between actual \f0\lang1033 parameters (arguments) \f1\lang1049 and formal parameters?\par
+\b0 When a function is called, the values (expressions) that are passed in the call are called the arguments or actual parameters (both terms mean the same thing).\par
+Formal parameters are written in the function prototype and function header of the definition. Formal parameters are local variables which are assigned values from the arguments when the function is called.\par
 \par
-What is \f3\lquote\f1 std\f3\rquote\f1 ?\par
-Default namespace defined by C++.\par
+\b Is 068 a valid octal number?\par
+\b0 No, it contains invalid octal digits.\par
 \par
+\b What is the purpose of #undef preprocessor?\par
+\b0 It will be used to undefine an existing macro definition.\par
 \par
-What is \f3\lquote\f1 cout\f3\rquote\f1 ?\par
-cout is the object of ostream class. The stream \f3\lquote\f1 cout\f3\rquote\f1  is by default connected to console output device.\par
+\b Can we nest multi line comments in a C++ code?\par
+\b0 Multi-line comments start with /* and end with */\f0\lang1033 .\f1\lang1049\par
 \par
-What is \f3\lquote\f1 cin\f3\rquote\f1 ?\par
-cin is the object of istream class. The stream \f3\lquote\f1 cin\f3\rquote\f1  is by default connected to console input device.\par
-\par
-\par
-If a pointer declared for a class, which operator can be used to access its class members?\par
-Arrow (->) operator can be used for the same\par
-\par
-\par
-S++ or S = S+1, which can be recommended to increment the value by 1 and why?\par
-S++, as it is single machine instruction (INC) internally.\par
-\par
-What is the difference between actual and formal parameters?\par
-The parameters sent to the function at calling end are called as actual parameters while at the receiving of the function definition called as formal parameters.\par
+\b What is the order of objects destroyed in the memory?\par
+\b0 The objects are destroyed in the reverse order of their creation.\par
 \par
 \par
 \par
-Is 068 a valid octal number?\par
-No, it contains invalid octal digits.\par
 \par
-What is the purpose of #undef preprocessor?\par
-It will be used to undefine an existing macro definition.\par
-\par
-Can we nest multi line comments in a C++ code?\par
-No, we cannot.\par
-\par
-What is the order of objects destroyed in the memory?\par
-The objects are destroyed in the reverse order of their creation.\par
-\par
-What is a friend class?\par
-A class members can gain accessibility over other class member by placing the class declaration prefixed with the keyword \f3\lquote\f1 friend\f3\rquote\f1  in the destination class.\par
-\par
-\par
-\par
-\f0\lang1033 === friend function\par
-=== friend class\par
-=== union\par
+\f0\lang1033 === union\par
 === raii\par
 === rule of three\par
 === rule of five\par
 === Rule of zero\par
 \f1\lang1049 === Delegating constructors in c++\par
-=== Move Constructors and Move Assignment Operators \par
+=== Move Assignment Operators \par
 === \'ed\'e0\'f1\'eb\'e5\'e4\'ee\'e2\'e0\'ed\'e8\'e5 \'ea\'ee\'ed\'f1\'f2\'f0\'f3\'ea\'f2\'ee\'f0\'ee\'e2\f0\lang1033\par
 === explicit, implicit constructors\par
 === deleted constructors\par
@@ -423,6 +406,6 @@ A class members can gain accessibility over other class member by placing the cl
 === \f0\lang1033 hangling pointer\par
 === hangling reference\par
 === class - const in function\par
-=== auto\f1\lang1049\par
+=== sizeof\f1\lang1049\par
 }
  
