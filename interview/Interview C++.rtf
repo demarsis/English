@@ -389,12 +389,29 @@ Formal parameters are written in the function prototype and function header of t
 \b What is the order of objects destroyed in the memory?\par
 \b0 The objects are destroyed in the reverse order of their creation.\par
 \par
+\b\f0\lang1033 What is a struct?\par
+\b0 Structure is a collection of variables of different data types under a single name. It is similar to a class in that, both holds a collecion of data of different data types.\par
+\par
+\b What is a union?\f1\lang1049\par
+\b0 Union is similar to struct, unions differ in the aspect that the fields of a union share the same position in memory. The size of the union is the size of its largest field\f0\lang1033 .\f1\lang1049\par
+\par
+\b\f0\lang1033 What is RAII?\par
+\b0 Resource Acquisition Is Initialization or RAII, is a C++ programming technique. RAII guarantees that the resource is available to any function that may access the object (resource availability is a class invariant, eliminating redundant runtime tests). It also guarantees that all resources are released when the lifetime of their controlling object ends, in reverse order of acquisition. Likewise, if resource acquisition fails (the constructor exits with an exception), all resources acquired by every fully-constructed member and base subobject are released in reverse order of initialization.\par
+\par
+\b What is const keyword?\par
+\ul\b0 Const values\ulnone . The const keyword specifies that a variable's value is constant and tells the compiler to prevent the programmer from modifying it.\par
+\ul Const member functions\ulnone . Declaring a member function with the const keyword specifies that the function is a "read-only" function that does not modify the object for which it is called.\par
+\par
+\par
+\b What is sizeof operator?\par
+\b0 The sizeof is a compile-time operator that determines the size, in bytes, of a variable or data type. The result of the sizeof operator is of type size_t.\par
+\par
+\b What is sizeof... operator?\par
+\b0 The sizeof is a compile-time operator that determines the number of elements in a template parameter pack.\f1\lang1049\par
 \par
 \par
 \par
-\f0\lang1033 === union\par
-=== raii\par
-=== rule of three\par
+\f0\lang1033 === rule of three\par
 === rule of five\par
 === Rule of zero\par
 \f1\lang1049 === Delegating constructors in c++\par
@@ -405,7 +422,6 @@ Formal parameters are written in the function prototype and function header of t
 \f1\lang1049 === deducing template arguments\par
 === \f0\lang1033 hangling pointer\par
 === hangling reference\par
-=== class - const in function\par
-=== sizeof\f1\lang1049\par
+\par
 }
  
