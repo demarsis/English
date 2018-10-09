@@ -330,7 +330,7 @@ That's a linker option. It tells the linker to link with (-l) the m library. Tha
 \b What is "address of" operator?\par
 \b0 The \lang9 ampersand\lang1033  (&) is a unary operator that returns the memory address of its operand. It should be read as "the address of".\par
 \par
-\b What is indirection operator?\par
+\b What is dereference operator (indirection operator)?\par
 \b0\f1\lang1049 It is a unary operator that returns the value of the variable located at the address specified by its operand.\par
 \par
 \b What are valid operations on pointers?\par
@@ -416,23 +416,33 @@ Formal parameters are written in the function prototype and function header of t
 \b0\f1\lang1049 A dangling reference is a reference to an object that no longer exists\f0\lang1033 .\par
 \par
 \b What is a wild pointer?\par
-\b0 Uninitialized pointers are known as wild pointers because they point to some arbitrary memory location and may cause a program to crash or behave badly.\f1\lang1049\par
-\par
-\par
-\f0\lang1033 What is a move assignment operator?\par
+\b0 Uninitialized pointers are known as wild pointers because they point to some arbitrary memory location and may cause a program to crash or behave badly.\par
 \f1\lang1049\par
+\b\f0\lang1033 What is a rvalue, lvalue?\par
+\b0 An lvalue is an expression e that may appear on the left or on the right hand side of an assignment, whereas an rvalue is an expression that can only appear on the right hand side of an assignment.\par
+An lvalue is an expression that refers to a memory location and allows us to take the address of that memory location via the & operator. An rvalue is an expression that is not an lvalue.\par
+\f1\lang1049\par
+\b\f0\lang1033 What is a move assignment operator?\par
+\b0 The move assignment operator = is used for transferring a temporary object to an existing object. The parameter of a move assignment operator is an rvalue reference.\par
+If the move assignment operator is not explicitly defined, the compiler generates an implicit move assignment operator.\par
+\f1\lang1049\par
+\b\f0\lang1033 What is constructor member initializer lists?\par
+\b0 The member initializer list is inserted after the constructor parameters. It begins with a colon (:), and then lists each variable to initialize along with the value for that variable separated by a comma.\par
 \par
-\f0\lang1033 === rule of three\par
-=== rule of five\par
-=== Rule of zero\par
-\f1\lang1049 === Delegating constructors in c++\par
+\par
+\par
+=== Brace Initialization\f1\lang1049\par
+\f0\lang1033 === What is a POD?\f1\lang1049\par
+\par
+=== Delegating constructors in c++\par
+\f0\lang1033 === copy elision\par
+\f1\lang1049\par
 === Move Assignment Operators \par
 === \'ed\'e0\'f1\'eb\'e5\'e4\'ee\'e2\'e0\'ed\'e8\'e5 \'ea\'ee\'ed\'f1\'f2\'f0\'f3\'ea\'f2\'ee\'f0\'ee\'e2\f0\lang1033\par
 === explicit, implicit constructors\par
 === deleted constructors\par
 \f1\lang1049 === deducing template arguments\par
-\f0\lang1033\par
-=== rvalue, rvalue\par
+\f0\lang1033 === std::initializer_list\par
 === std::move function\par
 === nullptr\par
 === foreach (begin, end functions)\par
@@ -447,8 +457,12 @@ Formal parameters are written in the function prototype and function header of t
 === lambda functions\par
 === assert\par
 === static assert\par
-=== copy elision\par
 \par
- \par
+=== rule of three\par
+=== rule of five\par
+=== Rule of zero\par
+\par
+\par
+\f1\lang1049 === most vexing parse\f0\lang1033  \par
 }
  
