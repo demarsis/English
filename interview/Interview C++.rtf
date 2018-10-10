@@ -429,21 +429,30 @@ If the move assignment operator is not explicitly defined, the compiler generate
 \b\f0\lang1033 What is constructor member initializer lists?\par
 \b0 The member initializer list is inserted after the constructor parameters. It begins with a colon (:), and then lists each variable to initialize along with the value for that variable separated by a comma.\par
 \par
+\b What is agregate initialization (brace initialization, list initialization)?\par
+\b0 Aggregate initialization means the use of brace-enclosed initializer lists to initialize all members of an aggregate.\par
 \par
+\b What is std::initializer_list?\par
+\b0 std::initializer_list<T> is introduced in C++11 to make initialization uniform in C++. When a compiler sees an initializer list, it automatically converts it into an object of type std::initializer_list. Therefore, if we create a constructor that takes a std::initializer_list parameter, we can create objects using the initializer list as an input.\par
 \par
-=== Brace Initialization\f1\lang1049\par
-\f0\lang1033 === What is a POD?\f1\lang1049\par
+\b What is narrowing (narrowing conversion)?\par
+\b0 A narrowing conversion changes a value to a data type that might not be able to hold some of the possible values.\par
 \par
-=== Delegating constructors in c++\par
-\f0\lang1033 === copy elision\par
-\f1\lang1049\par
+\b What is a POD?\f1\lang1049\par
+\b0 A Plain Old Data Structure in C++ is an aggregate class\f0\lang1033  (structure)\f1\lang1049  that contains only PODS as members, has no user-defined destructor, no user-defined copy assignment operator, and no nonstatic members of pointer-to-member type.\par
+\par
+\b\f0\lang1033 What is d\f1\lang1049 elegating constructors\f0\lang1033 ?\f1\lang1049\par
+\b0\f0\lang1033 T\f1\lang1049 here are often cases where it would be useful for one constructor to call another constructor in the same class.\f0\lang1033  This feature, called Constructor Delegation, was introduced in C++ 11.\f1\lang1049\par
+\par
+\b\f0\lang1033 What is copy elision?\par
+\b0 T\f1\lang1049 he compilers are required to omit the copy and move construction of class objects, even if the copy/move constructor and the destructor have observable side-effects. The objects are constructed directly into the storage where they would otherwise be copied/moved to.\par
+\par
 === Move Assignment Operators \par
 === \'ed\'e0\'f1\'eb\'e5\'e4\'ee\'e2\'e0\'ed\'e8\'e5 \'ea\'ee\'ed\'f1\'f2\'f0\'f3\'ea\'f2\'ee\'f0\'ee\'e2\f0\lang1033\par
 === explicit, implicit constructors\par
 === deleted constructors\par
 \f1\lang1049 === deducing template arguments\par
-\f0\lang1033 === std::initializer_list\par
-=== std::move function\par
+\f0\lang1033 === std::move function\par
 === nullptr\par
 === foreach (begin, end functions)\par
 === override\par
