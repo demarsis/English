@@ -447,12 +447,24 @@ If the move assignment operator is not explicitly defined, the compiler generate
 \b\f0\lang1033 What is copy elision?\par
 \b0 T\f1\lang1049 he compilers are required to omit the copy and move construction of class objects, even if the copy/move constructor and the destructor have observable side-effects. The objects are constructed directly into the storage where they would otherwise be copied/moved to.\par
 \par
-=== Move Assignment Operators \par
-=== \'ed\'e0\'f1\'eb\'e5\'e4\'ee\'e2\'e0\'ed\'e8\'e5 \'ea\'ee\'ed\'f1\'f2\'f0\'f3\'ea\'f2\'ee\'f0\'ee\'e2\f0\lang1033\par
-=== explicit, implicit constructors\par
-=== deleted constructors\par
-\f1\lang1049 === deducing template arguments\par
-\f0\lang1033 === std::move function\par
+\b What is constructor inheritance?\par
+\b0 In C++03 standard constructors cannot be inherited and you need to inherit them manually one by one by calling base implementation on your own. If your compiler supports C++11 standard, there is a constructor inheritance.\par
+The syntax is as follows:\f0\lang1033  using MyClass::MyClass;\f1\lang1049\par
+\par
+\b\f0\lang1033 What is explicit constructor?\par
+\b0 The explicit function specifier controls unwanted implicit type conversions. It can only be used in declarations of constructors within a class declaration.\par
+\par
+\b What is deleted constructor?\par
+\b0 To declare a deleted function, you can append the \ldblquote =delete;\rdblquote  specifier to the end of a function declaration. The compiler prohibits the usage of a deleted function.\par
+\par
+\b What is std::move function?\par
+\b0 std::move is a standard library function that serves a single purpose -- to convert its argument into an r-value. We can pass an l-value to std::move, and it will return an r-value reference.\par
+\par
+\par
+\par
+=== std::forward function\par
+\par
+\f1\lang1049 === deducing template arguments\f0\lang1033\par
 === nullptr\par
 === foreach (begin, end functions)\par
 === override\par
@@ -466,7 +478,7 @@ If the move assignment operator is not explicitly defined, the compiler generate
 === lambda functions\par
 === assert\par
 === static assert\par
-\par
+=== noexcept\par
 === rule of three\par
 === rule of five\par
 === Rule of zero\par
