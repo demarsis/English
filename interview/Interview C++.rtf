@@ -457,12 +457,26 @@ The syntax is as follows:\f0\lang1033  using MyClass::MyClass;\f1\lang1049\par
 \b What is deleted constructor?\par
 \b0 To declare a deleted function, you can append the \ldblquote =delete;\rdblquote  specifier to the end of a function declaration. The compiler prohibits the usage of a deleted function.\par
 \par
+\b What is xvalue?\par
+\b0 An xvalue (an \ldblquote eXpiring\rdblquote  value) refers to an object, usually near the end of its lifetime.\par
+\par
 \b What is std::move function?\par
-\b0 std::move is a standard library function that serves a single purpose -- to convert its argument into an r-value. We can pass an l-value to std::move, and it will return an r-value reference.\par
+\b0 std::move is a standard library function that serves a single purpose -- to convert its argument into an r-value. We can pass an l-value to std::move, and it will return an r-value reference.\f1\lang1049  \f0\lang1033\par
+\f1\lang1049\par
+\b\f0\lang1033 What is std::forward function?\par
+\b0\par
 \par
 \par
 \par
-=== std::forward function\par
+What is emplace_back function?\par
+\par
+Is it possible to refer directly to a reference in C++?\par
+\par
+\f1\lang1049 === \'f1\'e2\'e5\'f0\'f2\'ea\'e0 \'f1\'f1\'fb\'eb\'ee\'ea\f0\lang1033\par
+\par
+=== pointer to a reference\par
+=== array of references\par
+\par
 \par
 \f1\lang1049 === deducing template arguments\f0\lang1033\par
 === nullptr\par
@@ -475,7 +489,12 @@ The syntax is as follows:\f0\lang1033  using MyClass::MyClass;\f1\lang1049\par
 === shared_ptr\par
 === weak_ptr\par
 === make_shared\par
+\par
 === lambda functions\par
+\f1\lang1049 === [] \f3\endash  capture specificator\f1 , \'ee\'ef\'f0\'e5\'e4\'e5\'eb\'ff\'e5\'f2 lambda-\'e2\'fb\'f0\'e0\'e6\'e5\'ed\'e8\'e5, \'e2\'ed\'f3\'f2\'f0\'e8 \'fd\'f2\'e8\'f5 \'f1\'ea\'ee\'e1\'ee\'ea \'f2\'e0\'ea\'e6\'e5 \'ec\'ee\'e6\'ed\'ee \'e7\'e0\'e4\'e0\'f2\'fc \'e7\'e0\'f5\'e2\'e0\'f2\'fb\'e2\'e0\'e5\'ec\'fb\'e9 \'ea\'ee\'ed\'f2\'e5\'ea\'f1\'f2.\f3\par
+\f1 === () \f3\endash  argument list\f1  - argument list, \'e7\'e4\'e5\'f1\'fc \'ec\'ee\'e6\'ed\'ee \'e7\'e0\'e4\'e0\'f2\'fc \'f1\'ef\'e8\'f1\'ee\'ea \'ef\'e0\'f0\'e0\'ec\'e5\'f2\'f0\'ee\'e2\f3\par
+\f1 === -> int \f3\endash  \f1\'ee\'e7\'ed\'e0\'f7\'e0\'e5\'f2, \'f7\'f2\'ee \'e2\'ee\'e7\'e2\'f0\'e0\'f9\'e0\'e5\'ec\'ee\'e5 \'e7\'ed\'e0\'f7\'e5\'ed\'e8\'e5 \'e8\'ec\'e5\'e5\'f2 \'f2\'e8\'ef int.\f0\lang1033\par
+\par
 === assert\par
 === static assert\par
 === noexcept\par
