@@ -1,508 +1,947 @@
-{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1049{\fonttbl{\f0\fnil\fcharset0 Verdana;}{\f1\fnil\fcharset204 Verdana;}{\f2\fnil\fcharset1 Cambria Math;}{\f3\fnil Verdana;}{\f4\fnil\fcharset0 Cambria Math;}}
-{\*\generator Riched20 10.0.17134}{\*\mmathPr\mmathFont2\mwrapIndent1440 }\viewkind4\uc1 
-\pard\sl276\slmult1\qj\f0\fs20\lang9\par
-\b What is Object Oriented Programming?\par
-\b0 Object-oriented programming (or OOP) is a programming paradigm or style of programming. It relies on the concept of objects, which are abstract entities that consist of internal state (also known variously as attributes, properties, or instance variables), as well as behaviour (the functions or methods that act on the internal state).\par
-\par
-\b What are main features of OOP?\par
-\b0 Encapsulation\par
-Inheritance\par
-Polymorphism\par
-Abstraction\par
-\par
-\b What is encapsulation?\par
-\b0\lang1033 Encapsulation is containing and hiding information about an object, such as internal data structures and code. Encapsulation isolates the internal complexity of an object's operation from the rest of the application.\par
-\par
-\b What is inheritance?\par
-\b0 Inheritance allows one class to reuse the state and behavior of another class. The derived class inherits the properties and method implementations of the base class and extends it by overriding methods and adding additional properties and methods.\par
-\par
-\b What is \lang9 polymorphism\lang1033 ?\par
-\b0 Polymorphism is a feature of OOPs that allows the object to behave differently in different conditions. In C++ we have two types of polymorphism:\par
-- Compile time polymorphism is based on function and operator overloading.\par
-- Runtime Polymorphism is based on function overriding.\par
-\par
-\b What is a\lang9 bstraction?\lang1033\par
-\b0 Abstraction refers to hiding the internal implementation and exhibiting only the necessary details. Through the process of abstraction, a programmer hides all but the relevant data about an object in order to reduce complexity and increase efficiency.\par
-\par
-\b What is a class?\par
-\b0 Class is a blue print which reflects the entities attributes and actions. Technically defining a class is designing an user defined data type.\par
-\par
-\b What is an abstract class in C++?\par
-\b0 A class with at least one pure virtual function is called as abstract class. We cannot instantiate an abstract class.\par
-\par
-\b What is a pure virtual function?\par
-\b0 A virtual function with no function body and assigned with a value zero is called as pure virtual function.\par
-\par
-\b What is an object?\par
-\b0 An instance of the class is called as object.\par
-\par
-\b List the types of inheritance supported in C++.\par
-\ul\b0 Single Inheritance\ulnone . A derived class with only one base class is called single inheritance.\par
-\ul Multilevel Inheritance\ulnone . A derived class with one base class and that base class is a derived class of another is called multilevel inheritance.\par
-\ul Multiple Inheritance\ulnone . A derived class with multiple base class is called multiple inheritance.\par
-\ul Heirarchical Inheritance\ulnone . Multiple derived classes with same base class is called hierarchical inheritance.\par
-\ul Hybrid Inheritance\ulnone . Combination of multiple and hierarchical inheritance is called hybrid inheritance.\par
-\ul Multipath Inheritance\ulnone . A derived class with two base classes and these two base classes have one common base class is called multipath inheritance.\par
-\par
-\b What is Access Modifiers in a class in C++?\par
-\b0 Access modifiers (or Access Specifiers) in a class are used to set the accessibility of the class members. There are 3 types of access modifiers available in C++:\par
-\ul Public\ulnone . All the class members declared under public will be available to everyone.\par
-\ul Private\ulnone . The class members declared as private can be accessed only by the functions inside the class. \par
-\ul Protected\ulnone . Protected access modifier is similar to that of private access modifiers, the difference is that the class member declared as Protected are inaccessible outside the class but they can be accessed by any subclass (derived class) of that class.\par
-\par
-\b What is an inline function?\par
-\b0 If a function is inline, the compiler places a copy of the code of that function at each point where the function is called at compile time. If function is big (in term of executable instruction etc) then, compiler can ignore the \ldblquote inline\rdblquote  request and treat the function as normal function.\par
-\par
-\b What is a reference variable in C++?\par
-\b0 A reference variable is an alias name for the existing variable. Which mean both the variable name and reference variable point to the same memory location.\par
-\par
-\b What are the operators used to access the class members?\par
-\b0 The pointer-to-member operators, .* and ->* (dot and arrow operator).\par
-\par
-\b What is function overloading?\par
-\b0 Overloaded functions - functions having same name but different arguments. Overloaded functions may or may not have different return type.\par
-\par
-\b\f1\lang1049 What is function overriding?\par
-\b0 Function Overriding\f0\lang1033  - i\f1\lang1049 t is the redefinition of base class function in its derived class with same signature i.e return type and parameters.\par
-\par
-\b\f0\lang1033 Do we have a String primitive data type in C++?\par
-\b0 No, it\rquote s a class from standart library.\par
-\par
-\b When a class member is defined outside the class, which operator can be used to associate the function definition to a particular class?\par
-\b0 Scope resolution operator, double colon operator (::)\par
-\par
-\b What is constructor?\par
-\b0 A constructor is a member function of a class which initializes objects of a class. In C++, Constructor is automatically called when object (instance of class) create. Features: \par
-\f1\lang1049 - \f0\lang1033 Constructor has same name as the class itself\par
-\f1\lang1049 - \f0\lang1033 Constructors don\rquote t have return type\par
-\f1\lang1049 - \f0\lang1033 A constructor is automatically called when an object is created.\par
-\f1\lang1049 - \f0\lang1033 If we do not specify a constructor, C++ compiler generates a default constructor for us\par
-Types of Constructors:\par
-\ul Default Constructor\ulnone . Default constructor is the constructor which doesn\rquote t take any argument. It has no parameters. Even if we do not define any constructor explicitly, the compiler will automatically provide a default constructor implicitly.\par
-\ul Parameterized Constructor\ulnone . A constructor which has parameters is called parameterized constructor.\par
-\ul Copy Constructor\ulnone . A copy constructor is a member function which initializes an object using another object of the same class.\par
-\ul Move constructor\ulnone . A move constructor is a constructor whose first parameter is rvalue-reference.\par
-\par
-\b What is destructor?\par
-\b0 A destructor is a special member function that is called when the lifetime of an object ends. The purpose of the destructor is to free the resources that the object may have acquired during its lifetime.\par
-It cannot be overloaded and the only form is without the parameters.\par
-\par
-\b What is virtual destructor?\par
-\b0 Deleting a derived class object using a pointer to a base class that has a non-virtual destructor results in undefined behavior. To correct this situation, the base class should be defined with a virtual destructor.\par
-\par
-\b Which operator can be used in C++ to allocate dynamic memory?\par
-\b0 The new operator provides dynamic storage allocation.\par
-\par
-\b What is the purpose of \lquote delete\rquote  operator?\par
-\b0 delete operator is used to release the dynamic memory which was created using new operator.\par
-\par
-\b What is a friend function?\par
-\b0 Friend function can be given special grant to access private and protected members. A friend function can be:\par
-- A method of another class\par
-- A global function\par
-\par
-\b\f1\lang1049 What is a friend class?\par
-\b0 A friend class can access private and protected members of other class in which it is declared as friend.\f0\lang1033\par
-\par
-\b What is the 'this' pointer?\par
-\b0\lquote this\rquote  pointer is a constant pointer that holds the memory address of the current object. \lquote this\rquote  pointer is not available in static member functions as static member functions can be called without any object (with class name).\par
-\par
-\b\f1\lang1049 What is the difference between the keywords struct and class in C++?\par
-\b0 The only difference between a struct and class in C++ is the default accessibility of member variables and methods. In a struct they are public; in a class they are private.\par
-\par
-\b What is a namespace?\par
-\b0 A namespace is the logical division of the code which can be used to resolve the name conflict of the identifiers by placing them under different name space.\par
-\par
-\b\f0\lang1033 What is a template?\par
-\b0 A template is a C++ programming feature that permits function and class operations with generic types, which allows functionality with different data types without rewriting entire code blocks for each type.\par
-\par
-\b\f1\lang1049 What is a class template?\par
-\b0 A class template defines a family of classes.\f0\lang1033  \f1\lang1049 A class template provides a specification for generating classes based on parameters.\f0\lang1033  \f1\lang1049 A class template is instantiated by passing a given set of types to it as template arguments.\par
-\par
-\b What is a \f0\lang1033 function\f1\lang1049  template?\b0\par
-\f0\lang1033 A function template defines a family of functions. A function template behaves like a function except that the template can have arguments of many different types.\par
-\par
-\b\f1\lang1049 What is a \f0\lang1033 function\f1\lang1049  template?\b0\par
-\f0\lang1033 This allows a variable value to be computed at compile time and used as such without casting it.\par
-\f1\lang1049\par
-\b\f0\lang1033 What are template parameters?\f1\lang1049\par
-\b0 Templates are parametrized by one or more template parameters, of three kinds: type template parameters, non-type template parameters, and template template parameters.\par
-\par
-\b\f0\lang1033 What is a template parameter pack?\par
-\b0 A template parameter pack is a template parameter that accepts zero or more template arguments.\par
-\f1\lang1049\par
-\b\f0\lang1033 What are template keywords in C++?\f1\lang1049\par
-\b0\f0\lang1033 template, typename, class\f1\lang1049\par
-\par
-\b\f0\lang1033 Difference between typename and class in templates?\f1\lang1049\par
-\b0\f0\lang1033 There is no semantic difference between class and typename in a template-parameter.\par
-\par
-\b Why a non-type template parameter should be a constant integral expression?\par
-\b0 Non-constant expressions can't be parsed and substituted during compile-time.\par
-\par
-\b What is a container class?\par
-\b0 Container class is a class designed to hold and organize multiple instances of another type (either another class, or a fundamental type). By far the most commonly used container in programming is the array, which you have already seen many examples of. Although C++ has built-in array functionality, programmers will often use an array container class (std::array or std::vector) instead because of the additional benefits they provide.\par
-\par
-\b What is a preprocessor?\par
-\b0 Preprocessor programs provides preprocessors directives which tell the compiler to preprocess the source code before compiling. All of these preprocessor directive begins with a '#' (hash) symbol.\par
-\par
-\b What are the different ways of passing parameters to the functions? Which to use when?\par
-\b0 Call by value \f2\u8722?\f0  we send only values to the function as parameters.\par
-Call by address \f2\u8722?\f0  we send address of the actual parameters instead of values.\par
-Call by reference \f2\u8722?\f0  the actual parameters are received with the C++ new reference variables as formal parameters.\par
-\par
-\b\f1\lang1049 Can we resize the allocated memory which was allocated using \f3\lquote\f1 new\f3\rquote\f1  operator?\par
-\b0 No, there is no such provision available.\par
-\f0\lang1033\par
-\b\f1\lang1049 Which operator can be used to determine the size of a data type/class or variable/object?\par
-\b0 sizeof\par
-\f0\lang1033\par
-\b\f1\lang1049 What is recursion?\par
-\b0 Function calling itself is called as recursion.\par
-\f0\lang1033\par
-\b\f1\lang1049 What is the difference between delete and delete[]?\par
-\b0\f0\lang1033 The delete operator deallocates memory and calls the destructor for a single object created with new.\par
-The delete [] operator deallocates memory and calls destructors for an array of objects created with new [].\par
-\par
-\b\f1\lang1049 Is it legal to assign a base class object to a derived class pointer?\par
-\b0 No, it will be error as the compiler fails to do conversion.\par
-\f0\lang1033\par
-\b\f1\lang1049 What is the full form of STL?\par
-\b0 Standard template library\par
-\par
-\b What is the use of the keyword \f3\lquote\f1 using\f3\rquote\f1 ?\par
-\b0 It is used to specify the namespace being used in.\par
-\f0\lang1033 A\f4  \f0 typedef\f4 -\f0 name\f4  \f0 can\f4  \f0 also\f4  \f0 be\f4  \f0 introduced\f4  \f0 by\f4  \f0 an\f4  \f0 alias\f4 -\f0 declaration\f4 .\par
-\par
-\b\f1\lang1049 What is difference between including the header file with-in angular braces < > and double quotes \f3\ldblquote\f1  \f3\ldblquote\f0\lang1033 ?\f1\lang1049\par
-\b0 If a header file is included with in <> then the compiler searches for the particular header file only with in the built in include path. If a header file is included with in \f3\ldblquote\f1  \f3\ldblquote\f1 , then the compiler searches for the particular header file first in the current working directory, if not found then in the built in include path\f0\lang1033 .\par
-\par
-\b\f1\lang1049 What is the difference between variable declaration\f0\lang1033 , \f1\lang1049 definition\f0\lang1033 , initialization and assignment\f1\lang1049 ?\par
-\ul\b0\f0\lang1033 Declaration\ulnone . \f1\lang1049 A declaration\f0\lang1033  \f1\lang1049 introduces one or more names into a program\f0\lang1033 :\f1\lang1049\par
+{\rtf1\adeflang1025\ansi\ansicpg1251\uc1\adeff31507\deff0\stshfdbch31505\stshfloch31506\stshfhich31506\stshfbi31507\deflang1049\deflangfe1049\themelang1049\themelangfe0\themelangcs0{\fonttbl{\f0\fbidi \froman\fcharset204\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f34\fbidi \froman\fcharset204\fprq2{\*\panose 02040503050406030204}Cambria Math;}{\f40\fbidi \fswiss\fcharset204\fprq2{\*\panose 020b0604030504040204}Verdana;}
+{\flomajor\f31500\fbidi \froman\fcharset204\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\fdbmajor\f31501\fbidi \froman\fcharset204\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\fhimajor\f31502\fbidi \fswiss\fcharset204\fprq2{\*\panose 020f0302020204030204}Calibri Light;}{\fbimajor\f31503\fbidi \froman\fcharset204\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\flominor\f31504\fbidi \froman\fcharset204\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\fdbminor\f31505\fbidi \froman\fcharset204\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\fhiminor\f31506\fbidi \fswiss\fcharset204\fprq2{\*\panose 020f0502020204030204}Calibri;}{\fbiminor\f31507\fbidi \froman\fcharset204\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f43\fbidi \froman\fcharset0\fprq2 Times New Roman;}
+{\f41\fbidi \froman\fcharset238\fprq2 Times New Roman CE;}{\f44\fbidi \froman\fcharset161\fprq2 Times New Roman Greek;}{\f45\fbidi \froman\fcharset162\fprq2 Times New Roman Tur;}{\f46\fbidi \froman\fcharset177\fprq2 Times New Roman (Hebrew);}
+{\f47\fbidi \froman\fcharset178\fprq2 Times New Roman (Arabic);}{\f48\fbidi \froman\fcharset186\fprq2 Times New Roman Baltic;}{\f49\fbidi \froman\fcharset163\fprq2 Times New Roman (Vietnamese);}{\f383\fbidi \froman\fcharset0\fprq2 Cambria Math;}
+{\f381\fbidi \froman\fcharset238\fprq2 Cambria Math CE;}{\f384\fbidi \froman\fcharset161\fprq2 Cambria Math Greek;}{\f385\fbidi \froman\fcharset162\fprq2 Cambria Math Tur;}{\f388\fbidi \froman\fcharset186\fprq2 Cambria Math Baltic;}
+{\f389\fbidi \froman\fcharset163\fprq2 Cambria Math (Vietnamese);}{\f443\fbidi \fswiss\fcharset0\fprq2 Verdana;}{\f441\fbidi \fswiss\fcharset238\fprq2 Verdana CE;}{\f444\fbidi \fswiss\fcharset161\fprq2 Verdana Greek;}
+{\f445\fbidi \fswiss\fcharset162\fprq2 Verdana Tur;}{\f448\fbidi \fswiss\fcharset186\fprq2 Verdana Baltic;}{\f449\fbidi \fswiss\fcharset163\fprq2 Verdana (Vietnamese);}{\flomajor\f31510\fbidi \froman\fcharset0\fprq2 Times New Roman;}
+{\flomajor\f31508\fbidi \froman\fcharset238\fprq2 Times New Roman CE;}{\flomajor\f31511\fbidi \froman\fcharset161\fprq2 Times New Roman Greek;}{\flomajor\f31512\fbidi \froman\fcharset162\fprq2 Times New Roman Tur;}
+{\flomajor\f31513\fbidi \froman\fcharset177\fprq2 Times New Roman (Hebrew);}{\flomajor\f31514\fbidi \froman\fcharset178\fprq2 Times New Roman (Arabic);}{\flomajor\f31515\fbidi \froman\fcharset186\fprq2 Times New Roman Baltic;}
+{\flomajor\f31516\fbidi \froman\fcharset163\fprq2 Times New Roman (Vietnamese);}{\fdbmajor\f31520\fbidi \froman\fcharset0\fprq2 Times New Roman;}{\fdbmajor\f31518\fbidi \froman\fcharset238\fprq2 Times New Roman CE;}
+{\fdbmajor\f31521\fbidi \froman\fcharset161\fprq2 Times New Roman Greek;}{\fdbmajor\f31522\fbidi \froman\fcharset162\fprq2 Times New Roman Tur;}{\fdbmajor\f31523\fbidi \froman\fcharset177\fprq2 Times New Roman (Hebrew);}
+{\fdbmajor\f31524\fbidi \froman\fcharset178\fprq2 Times New Roman (Arabic);}{\fdbmajor\f31525\fbidi \froman\fcharset186\fprq2 Times New Roman Baltic;}{\fdbmajor\f31526\fbidi \froman\fcharset163\fprq2 Times New Roman (Vietnamese);}
+{\fhimajor\f31530\fbidi \fswiss\fcharset0\fprq2 Calibri Light;}{\fhimajor\f31528\fbidi \fswiss\fcharset238\fprq2 Calibri Light CE;}{\fhimajor\f31531\fbidi \fswiss\fcharset161\fprq2 Calibri Light Greek;}
+{\fhimajor\f31532\fbidi \fswiss\fcharset162\fprq2 Calibri Light Tur;}{\fhimajor\f31535\fbidi \fswiss\fcharset186\fprq2 Calibri Light Baltic;}{\fhimajor\f31536\fbidi \fswiss\fcharset163\fprq2 Calibri Light (Vietnamese);}
+{\fbimajor\f31540\fbidi \froman\fcharset0\fprq2 Times New Roman;}{\fbimajor\f31538\fbidi \froman\fcharset238\fprq2 Times New Roman CE;}{\fbimajor\f31541\fbidi \froman\fcharset161\fprq2 Times New Roman Greek;}
+{\fbimajor\f31542\fbidi \froman\fcharset162\fprq2 Times New Roman Tur;}{\fbimajor\f31543\fbidi \froman\fcharset177\fprq2 Times New Roman (Hebrew);}{\fbimajor\f31544\fbidi \froman\fcharset178\fprq2 Times New Roman (Arabic);}
+{\fbimajor\f31545\fbidi \froman\fcharset186\fprq2 Times New Roman Baltic;}{\fbimajor\f31546\fbidi \froman\fcharset163\fprq2 Times New Roman (Vietnamese);}{\flominor\f31550\fbidi \froman\fcharset0\fprq2 Times New Roman;}
+{\flominor\f31548\fbidi \froman\fcharset238\fprq2 Times New Roman CE;}{\flominor\f31551\fbidi \froman\fcharset161\fprq2 Times New Roman Greek;}{\flominor\f31552\fbidi \froman\fcharset162\fprq2 Times New Roman Tur;}
+{\flominor\f31553\fbidi \froman\fcharset177\fprq2 Times New Roman (Hebrew);}{\flominor\f31554\fbidi \froman\fcharset178\fprq2 Times New Roman (Arabic);}{\flominor\f31555\fbidi \froman\fcharset186\fprq2 Times New Roman Baltic;}
+{\flominor\f31556\fbidi \froman\fcharset163\fprq2 Times New Roman (Vietnamese);}{\fdbminor\f31560\fbidi \froman\fcharset0\fprq2 Times New Roman;}{\fdbminor\f31558\fbidi \froman\fcharset238\fprq2 Times New Roman CE;}
+{\fdbminor\f31561\fbidi \froman\fcharset161\fprq2 Times New Roman Greek;}{\fdbminor\f31562\fbidi \froman\fcharset162\fprq2 Times New Roman Tur;}{\fdbminor\f31563\fbidi \froman\fcharset177\fprq2 Times New Roman (Hebrew);}
+{\fdbminor\f31564\fbidi \froman\fcharset178\fprq2 Times New Roman (Arabic);}{\fdbminor\f31565\fbidi \froman\fcharset186\fprq2 Times New Roman Baltic;}{\fdbminor\f31566\fbidi \froman\fcharset163\fprq2 Times New Roman (Vietnamese);}
+{\fhiminor\f31570\fbidi \fswiss\fcharset0\fprq2 Calibri;}{\fhiminor\f31568\fbidi \fswiss\fcharset238\fprq2 Calibri CE;}{\fhiminor\f31571\fbidi \fswiss\fcharset161\fprq2 Calibri Greek;}{\fhiminor\f31572\fbidi \fswiss\fcharset162\fprq2 Calibri Tur;}
+{\fhiminor\f31575\fbidi \fswiss\fcharset186\fprq2 Calibri Baltic;}{\fhiminor\f31576\fbidi \fswiss\fcharset163\fprq2 Calibri (Vietnamese);}{\fbiminor\f31580\fbidi \froman\fcharset0\fprq2 Times New Roman;}
+{\fbiminor\f31578\fbidi \froman\fcharset238\fprq2 Times New Roman CE;}{\fbiminor\f31581\fbidi \froman\fcharset161\fprq2 Times New Roman Greek;}{\fbiminor\f31582\fbidi \froman\fcharset162\fprq2 Times New Roman Tur;}
+{\fbiminor\f31583\fbidi \froman\fcharset177\fprq2 Times New Roman (Hebrew);}{\fbiminor\f31584\fbidi \froman\fcharset178\fprq2 Times New Roman (Arabic);}{\fbiminor\f31585\fbidi \froman\fcharset186\fprq2 Times New Roman Baltic;}
+{\fbiminor\f31586\fbidi \froman\fcharset163\fprq2 Times New Roman (Vietnamese);}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;
+\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\*\defchp 
+\fs22\loch\af31506\hich\af31506\dbch\af31505 }{\*\defpap \ql \li0\ri0\sa160\sl259\slmult1\widctlpar\wrapdefault\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 }\noqfpromote {\stylesheet{\ql \li0\ri0\sa160\sl259\slmult1
+\widctlpar\wrapdefault\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \rtlch\fcs1 \af31507\afs22\alang1025 \ltrch\fcs0 \fs22\lang1049\langfe1049\loch\f31506\hich\af31506\dbch\af31505\cgrid\langnp1049\langfenp1049 \snext0 \sqformat \spriority0 Normal;}
+{\*\cs10 \additive \ssemihidden \sunhideused \spriority1 Default Paragraph Font;}{\*
+\ts11\tsrowd\trftsWidthB3\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3\trcbpat1\trcfpat1\tblind0\tblindtype3\tsvertalt\tsbrdrt\tsbrdrl\tsbrdrb\tsbrdrr\tsbrdrdgl\tsbrdrdgr\tsbrdrh\tsbrdrv \ql \li0\ri0\sa160\sl259\slmult1
+\widctlpar\wrapdefault\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \rtlch\fcs1 \af31507\afs22\alang1025 \ltrch\fcs0 \fs22\lang1049\langfe1049\loch\f31506\hich\af31506\dbch\af31505\cgrid\langnp1049\langfenp1049 \snext11 \ssemihidden \sunhideused 
+Normal Table;}}{\*\rsidtbl \rsid1639920}{\mmathPr\mmathFont34\mbrkBin0\mbrkBinSub0\msmallFrac0\mdispDef1\mlMargin0\mrMargin0\mdefJc1\mwrapIndent1440\mintLim0\mnaryLim1}{\info{\operator dem}{\creatim\yr2018\mo11\dy5\hr22\min44}
+{\revtim\yr2018\mo11\dy5\hr22\min44}{\version2}{\edmins0}{\nofpages14}{\nofwords4486}{\nofchars25571}{\nofcharsws29998}{\vern85}}{\*\xmlnstbl {\xmlns1 http://schemas.microsoft.com/office/word/2003/wordml}}
+\paperw12240\paperh15840\margl1701\margr850\margt1134\margb1134\gutter0\ltrsect 
+\widowctrl\ftnbj\aenddoc\trackmoves0\trackformatting1\donotembedsysfont0\relyonvml0\donotembedlingdata1\grfdocevents0\validatexml0\showplaceholdtext0\ignoremixedcontent0\saveinvalidxml0\showxmlerrors0\horzdoc\dghspace120\dgvspace120\dghorigin1701
+\dgvorigin1984\dghshow0\dgvshow3\jcompress\viewkind1\viewscale110\rsidroot1639920 \nouicompat \fet0{\*\wgrffmtfilter 2450}\nofeaturethrottle1\ilfomacatclnup0\ltrpar \sectd \ltrsect\linex0\sectdefaultcl\sftnbj {\*\pnseclvl1
+\pnucrm\pnstart1\pnindent720\pnhang {\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang {\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang {\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang {\pntxta )}}{\*\pnseclvl5
+\pndec\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang 
+{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}\pard\plain \ltrpar\qj \li0\ri0\sl276\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 \rtlch\fcs1 \af31507\afs22\alang1025 \ltrch\fcs0 
+\fs22\lang1049\langfe1049\loch\af31506\hich\af31506\dbch\af31505\cgrid\langnp1049\langfenp1049 {\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang9\langfe1049\langnp9\insrsid3891094 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang9\langfe1049\langnp9\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is Object Oriented Programming?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang9\langfe1049\langnp9\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Object-oriented programming (or OOP) is a programming paradigm or style of programming. It relies on the concept of obj
+\hich\af40\dbch\af31505\loch\f40 ects, which are abstract entities that consist of internal state (also known variously as attributes, properties, or instance variables), as well as behaviour (the functions or methods that act on the internal state).
 
-\pard\li720\sl276\slmult1\qj void xyz();\par
-class klass;\par
-struct ztruct;\par
-int x;\par
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang9\langfe1049\langnp9\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What are main features of OOP?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang9\langfe1049\langnp9\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Encaps\hich\af40\dbch\af31505\loch\f40 ulation
+\par \hich\af40\dbch\af31505\loch\f40 Inheritance
+\par \hich\af40\dbch\af31505\loch\f40 Polymorphism
+\par \hich\af40\dbch\af31505\loch\f40 Abstraction
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang9\langfe1049\langnp9\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is encapsulation?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+Encapsulation is containing and hiding information about an object, such as internal data structures and code. Encapsulation isolates the internal complexity of an object's operation from\hich\af40\dbch\af31505\loch\f40  the rest of the application.
 
-\pard\sl276\slmult1\qj\ul\f0\lang1033 Definition\ulnone . Definitions\f1\lang1049  \f0\lang1033 specify what code or data the name describes. The compiler needs the definition in order to allocate storage space for the thing that is being declared.\par
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is inheritance?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+Inheritance allows one class to reuse the state and behavior of another class. The derived class inherits the properties and method implementations of the base class and extends it by overriding methods a\hich\af40\dbch\af31505\loch\f40 
+nd adding additional properties and methods.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang9\langfe1049\langnp9\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 polymorphism}{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 ?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+Polymorphism is a feature of OOPs that allows the object to behave differently in different conditions. In C++ we have two types of polymorphism:
+\par \hich\af40\dbch\af31505\loch\f40 - Compile time polymorphism is based on fu\hich\af40\dbch\af31505\loch\f40 nction and operator overloading.
+\par \hich\af40\dbch\af31505\loch\f40 - Runtime Polymorphism is based on function overriding.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is a}{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang9\langfe1049\langnp9\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 bstraction?}{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+Abstraction refers to hiding the internal implementation and exhibiting only the necessary details. Through the process of abstraction, a program\hich\af40\dbch\af31505\loch\f40 
+mer hides all but the relevant data about an object in order to reduce complexity and increase efficiency.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is a class?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+Class is a blue print which reflects the entities attributes and actions. Technically defining a class is designing an user defined\hich\af40\dbch\af31505\loch\f40  data type.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is an abstract class in C++?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 A class with at least one pure virtual function is called as abstract class. We cannot instantiate an abstract class.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is a pure virtual function?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 A virtual function with no function body and assigned with a value zero is called as pure virtual function.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is an object?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 An instance of the class is called as object.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 List the types of inheritance supported in C++.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Single Inheritance}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . A derived cla\hich\af40\dbch\af31505\loch\f40 ss with only one base class is called single inheritance.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Multilevel Inheritance}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . A derived class with one base class and that base class is a derived class of another is called multilevel inheritance.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Multiple Inheritance}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . A derived class with multiple ba\hich\af40\dbch\af31505\loch\f40 se class is called multiple inheritance.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Heirarchical Inheritance}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . Multiple derived classes with same base class is called hierarchical inheritance.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Hybrid Inheritance}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . Combination of multiple and hierarchical inheritance is called hybrid inheritance.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Mult\hich\af40\dbch\af31505\loch\f40 ipath Inheritance}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 . A derived class with two base classes and these two base classes have one common base class is called multipath inheritance.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is Access Modifiers in a class in C++?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Access modifiers (or Access Specifiers) in a class are used to set \hich\af40\dbch\af31505\loch\f40 
+the accessibility of the class members. There are 3 types of access modifiers available in C++:
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Public}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . All the class members declared under public will be available to everyone.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Private}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . The class members declared as private can be accessed only by the fu\hich\af40\dbch\af31505\loch\f40 nctions inside the class. 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Protected}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . Protected access modifier is similar to that of private access modifiers, the difference is that the class member declared as Protected are inaccessible outside the class but they can be accessed by any subclass (deriv
+\hich\af40\dbch\af31505\loch\f40 ed class) of that class.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is an inline function?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+If a function is inline, the compiler places a copy of the code of that function at each point where the function is called at compile time. If function is big (in term of executable instruction etc) th\hich\af40\dbch\af31505\loch\f40 \hich\f40 
+en, compiler can ignore the \'93\loch\f40 \hich\f40 inline\'94\loch\f40  request and treat the function as normal function.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is a reference variable in C++?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+A reference variable is an alias name for the existing variable. Which mean both the variable name and reference variable point to\hich\af40\dbch\af31505\loch\f40  the same memory location.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What are the operators used to access the class members?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 The pointer-to-member operators, .* and ->* (dot and arrow operator).
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is function overloading?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+Overloaded functions - functions having same name but different arguments. Overloaded functions may or may not have different return type.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is function overriding?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Function Overriding}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40  - i}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 
+t is the redefinition of base class function in its derived clas\hich\af40\dbch\af31505\loch\f40 s with same signature i.e return type and parameters.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Do we have a String primitive data type in C++?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 No, it\hich\f40 \rquote \loch\f40 s a class from standart library.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 When a class member is defined outside the class, which operator can be u\hich\af40\dbch\af31505\loch\f40 
+sed to associate the function definition to a particular class?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Scope resolution operator, double colon operator (::)
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is constructor?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 A constructor is a member function of a class which initializes objects of a class. In C++, Constructor is automatic
+\hich\af40\dbch\af31505\loch\f40 ally called when object (instance of class) create. Features: 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 - }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 Constructor has same name as the class itself
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 - }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 Constructors don\hich\f40 \rquote \loch\f40 t have return type
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 - }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 A constructor is automatically called when an object is created.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 - }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 If we do not specify a constructor, C+\hich\af40\dbch\af31505\loch\f40 + compiler generates a default constructor for us
+\par \hich\af40\dbch\af31505\loch\f40 Types of Constructors:
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Default Constructor}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . Default constructor is the constructor which doesn\hich\f40 \rquote \loch\f40 t take any argument. It has no parameters. Even if we do not define any constructor explicitly, the compiler wi
+\hich\af40\dbch\af31505\loch\f40 ll automatically provide a default constructor implicitly.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Parameterized Constructor}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . A constructor which has parameters is called parameterized constructor.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Copy Constructor}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . A copy constructor is a member function which initializes an object using anothe\hich\af40\dbch\af31505\loch\f40 r object of the same class.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Move constructor}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . A move constructor is a constructor whose first parameter is rvalue-reference.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is destructor?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 A destructor is a special member function that is called when the lifetime of an object ends. The purp
+\hich\af40\dbch\af31505\loch\f40 ose of the destructor is to free the resources that the object may have acquired during its lifetime.
+\par \hich\af40\dbch\af31505\loch\f40 It cannot be overloaded and the only form is without the parameters.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is virtual destructor?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Deleting a derived class object using a pointer to a bas\hich\af40\dbch\af31505\loch\f40 
+e class that has a non-virtual destructor results in undefined behavior. To correct this situation, the base class should be defined with a virtual destructor.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Which operator can be used in C++ to allocate dynamic memory?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 The new operator provides dynamic\hich\af40\dbch\af31505\loch\f40  storage allocation.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is the purpose of \hich\f40 \lquote \loch\f40 delete\hich\f40 \rquote \loch\f40  operator?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 delete operator is used to release the dynamic memory which was created using new operator.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is a friend function?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Friend function can be given special grant to access private and protect\hich\af40\dbch\af31505\loch\f40 
+ed members. A friend function can be:
+\par \hich\af40\dbch\af31505\loch\f40 - A method of another class
+\par \hich\af40\dbch\af31505\loch\f40 - A global function
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is a friend class?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 A friend class can access private and protected members of other class in which it is declared as friend.}{
+\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is the 'this' pointer?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \loch\af40\dbch\af31505\hich\f40 \lquote \loch\f40 this\hich\f40 \rquote \loch\f40  poi\hich\af40\dbch\af31505\loch\f40 
+nter is a constant pointer that holds the memory address of the current object. \hich\f40 \lquote \loch\f40 this\hich\f40 \rquote \loch\f40 
+ pointer is not available in static member functions as static member functions can be called without any object (with class name).
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is the difference between the ke\hich\af40\dbch\af31505\loch\f40 ywords struct and class in C++?
 
-\pard\li720\sl276\slmult1\qj int x;\par
-void xyz() \{...\}\par
-class klass \{...\};\par
-struct ztruct \{...\};\par
-enum \{ x, y, z \};\par
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 
+The only difference between a struct and class in C++ is the default accessibility of member variables and methods. In a struct they are public; in a class they are private.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is a namespace?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 
+A namespace is the logical division of the code which can be used to resolve the name conflict of the identifiers by placing them under different name space.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is a template?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 A template is a C++ programming feature that permits function and class opera\hich\af40\dbch\af31505\loch\f40 
+tions with generic types, which allows functionality with different data types without rewriting entire code blocks for each type.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is a class template?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 A class template defines a family of classes.}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 
+A class template provides a specification for genera\hich\af40\dbch\af31505\loch\f40 ting classes based on parameters.}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40  }{
+\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 A class template is instantiated by passing a given set of types to it as template arguments.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is a }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 
+\b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 function}{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 
+ template?}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 A function template defines a family of functions. A function template behaves like a function exc
+\hich\af40\dbch\af31505\loch\f40 ept that the template can have arguments of many different types.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is a }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 
+\b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 function}{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 
+ template?}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 This allows a variable value to be computed at compile time and used as such without casting it.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What are template parameters?}{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 
+\b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Templates are parametrized by on\hich\af40\dbch\af31505\loch\f40 
+e or more template parameters, of three kinds: type template parameters, non-type template parameters, and template template parameters.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is a template parameter pack?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 A template parameter pack is a template parameter that accepts zero or more templat\hich\af40\dbch\af31505\loch\f40 e arguments.
 
-\pard\sl276\slmult1\qj\ul Initialization\ulnone . Initialization of a variable provides its initial value at the time of construction.\par
-\ul Assignment\ulnone . The assignment statement indicates that the value given by the expression on the right hand side of the assignment operator (symbol =) must be stored in the variable named on the left hand side.\par
-\par
-\b\f1\lang1049 Which key word is used to perform unconditional branching?\par
-\b0 The goto statement transfers control to the location specified by label. The goto statement must be in the same function as the label it is referring, it may appear before or after the label.\f0\lang1033\par
-The goto statement gives power to jump to any part of program but, makes the logic of the program complex and tangled. In modern programming, goto statement is considered a harmful construct and a bad programming practice.\f1\lang1049\par
-\f0\lang1033\par
-\b What is big-endian and little-endian?\par
-\b0 Big-endian and little-endian are terms that describe the order in which a sequence of bytes are stored in computer memory. Big-endian is an order in which the "big end" (most significant value in the sequence) is stored first (at the lowest storage address). Little-endian is an order in which the "little end" (least significant value in the sequence) is stored first. For example, in a big-endian computer, the two bytes required for the hexadecimal number 4F52 would be stored as 4F52 in storage (if 4F is stored at storage address 1000, for example, 52 will be at address 1001). In a little-endian system, it would be stored as 524F (52 at address 1000, 4F at 1001).\par
-\par
-\b What's the difference between MSB and LSB?\par
-\b0 T\f1\lang1049 he most significant bit (MSB) is the bit which has the largest value in a multi-bit binary number.\f0\lang1033  T\f1\lang1049 he least significant bit is the bit which is farthest to the right and holds the least value in a multi-bit binary number.\par
-\f0\lang1033\par
-\b What is a token?\par
-\b0 A token is the smallest element of a program that is meaningful to the compiler. Tokens can be classified as follows: keywords, identifiers, constants, strings, special symbols, operators.\par
-\par
-\b What is const_cast conversion?\par
-\b0 A const_cast operator adds or removes a const or volatile modifier to or from a type.\par
-\par
-\b What is static_cast conversion?\par
-\b0 The static_cast operator performs an explicit type conversion. Static_cast conversions are checked at compile time to prevent obvious incompatibilities.\par
-\par
-\b What is dynamic_cast conversion?\par
-\b0 Safely converts pointers and references to classes up, down, and sideways along the inheritance hierarchy.\par
-\par
-\b What is reinterpret_cast conversion?\par
-\b0 Allows any pointer to be converted into any other pointer type. Also allows any integral type to be converted into any pointer type and vice versa.\par
-\par
-\b What is the difference between static_cast and dynamic_cast convertion?\par
-\b0 dynamic_cast should be used for converting pointers/references within an inheritance hierarchy, static_cast should be used for ordinary type conversions.\par
-\par
-\b Explain the purpose of the keyword volatile.\par
-\b0 Declaring a variable volatile directs the compiler that the variable can be changed externally. Hence avoiding compiler optimization on the variable reference.\par
-\par
-\b What is a storage class?\par
-\b0 Storage class of a variable defines the lifetime and visibility of a variable. Lifetime means the duration till which the variable remains active and visibility defines in which module of the program the variable is accessible.\par
-\par
-\b Mention the storage classes names in C++.\par
-\b0 There are five types of storage classes in C++. They are:\f1\lang1049  \f0\lang1033 automatic,\f1\lang1049  \f0\lang1033 external,\f1\lang1049  \f0\lang1033 static,\f1\lang1049  \f0\lang1033 register,\f1\lang1049  \f0\lang1033 mutable.\par
-\par
-\b Where an automatic variable is stored?\par
-\b0 Every local variable by default being an auto variable is stored in stack memory.\par
-\par
-\b What is the purpose of extern storage specifier?\par
-\b0 The extern keyword tells the compiler that a variable is declared in another source module (outside of the current scope). The linker then finds this actual declaration and sets up the extern variable to point to the correct location.\par
-\par
-\b What is role of static keyword?\par
-\ul\b0 Static global variable\ulnone . A variable declared as static at the top level of a source file is only visible throughout that file.\par
-\ul Static function\ulnone . Static function - a function declared as static at the top level of a source file - is only visible throughout that file.\par
-\ul Static local variables\ulnone . A variable declared static within the body of a function maintains its value between invocations of the function.\par
-\ul Static member variables\ulnone . Static data members of class are those members which are shared by all the objects. Static member variables (data members) are not initialied using constructor, because these are not dependent on object initialization.\par
-\ul Static method\ulnone . Static method - a method declared as static inside a class definition - are meant to be relevant to all instances of a class rather than any specific instance.\par
-\par
-\b When should we use the register storage specifier?\par
-\b0 The register storage class specifier indicates to the compiler that the object should be stored in a machine register. The register storage class specifier is typically specified for heavily used variables, such as a loop control variable, in the hopes of enhancing performance by minimizing access time. However, the compiler is not required to honor this request.\par
-\par
-\b What is the role of mutable storage class specifier?\par
-\b0 If a data member is declared mutable, then it is legal to assign a value to this data member from a const member function.\par
-\par
-\b Distinguish between shallow copy and deep copy.\par
-\b0 Shallow copy\f1\lang1049  (also known as a \f0\lang1033 b\f1\lang1049 itwise copy)\f0\lang1033  does memory dumping bit-by-bit from one object to another. Deep copy (\f1\lang1049 also known as a \f0\lang1033 memberwise \f1\lang1049 copy)\f0\lang1033  is copy field by field from object to another. Deep copy is achieved using copy constructor and or overloading assignment operator.\par
-\par
-\b Name the data type which can be used to store wide characters in C++.\par
-\b0 wchar_t\par
-\par
-\b What is operator overloading?\par
-\b0 Operator overloading customizes the C++ operators for operands of user-defined types.\par
-\par
-\b Name the default standard streams in C++.\par
-\b0 cin, cout, cerr and clog.\par
-\par
-\b Which access specifier/s can help to achive data hiding in C++?\par
-\b0 Private & Protected.\par
-\par
-\b Can I use \lquote delete\rquote  operator to release the memory which was allocated using malloc() function of C language?\par
-\b0 No, we need to use free() of C language for the same.\par
-\par
-\b\f1\lang1049 Can we implement all the concepts of OOPS using the keyword struct?\par
-\b0 Yes.\par
-\par
-\b What is the block scope variable in C++?\par
-\b0 An object has block scope if its declaration is located inside a block. An object with block scope is visible from the point where it is declared\f0\lang1033  (opening brace "\{")\f1\lang1049  to the closing brace \f0\lang1033 "\f1\lang1049\}\f0\lang1033 "\f1\lang1049  that terminates the block.\par
-\par
-\b What is the scope resolution operator?\par
-\b0 In C++, scope resolution operator is ::\f0\lang1033  (double colon)\f1\lang1049 . It is used for following purposes\f0\lang1033 :\par
-- To access a global variable when there is a local variable with same name.\par
-- \f1\lang1049 To define a function outside a class.\par
-\f0\lang1033 - \f1\lang1049 To access a class\rquote s static variables.\par
-\f0\lang1033 - In case of multiple Inheritance.\f1\lang1049\par
-\par
-\b What are command line arguments?\par
-\b0 Command-line arguments\f0\lang1033  \f1\lang1049 are passed to a program at runtime by the operating system when the program is requested by another program, such as a command interpreter ("shell") like cmd.exe on Windows or bash on Linux\f0\lang1033 . \f1\lang1049 All the arguments sent are the strings only.\f0\lang1033\par
-\par
-\b What is exception?\par
-\b0 A C++ exception is a response to an exceptional circumstance that arises while a program is running, such as an attempt to divide by zero. Exceptions provide a way to transfer control from one part of a program to another. C++ exception handling is built upon three keywords: try, catch, and throw.\f1\lang1049\par
-\par
-\b\f0\lang1033 Does C++ supports exception handling?\par
-\b0 C++ exception handling is built upon three keywords: try, catch, and throw.\par
-\ul try\ulnone  \f2\u8722?\f0  A try block identifies a block of code for which particular exceptions will be activated. It's followed by one or more catch blocks.\ul\lang1033\par
-catch\ulnone  \f2\u8722?\f0  A program catches an exception with an exception handler at the place in a program where you want to handle the problem. The catch keyword indicates the catching of an exception.\par
-\ul\lang1033 throw\ulnone  \f2\u8722?\f0  A program throws an exception when a problem shows up. This is done using a throw keyword.\par
-\f1\lang1049\par
-\par
-\b How can we catch all kind of exceptions in a single catch block?\par
-\b0 catch (...)\f0\lang1033  will catch all C++ exceptions.\f1\lang1049\par
-\par
-\b What is keyword auto for \f0\lang1033 in C?\f1\lang1049\par
-\b0\f0\lang1033 Auto def\f1\lang1049 ines a local variable as having a local lifetime. \f0\lang1033 By defa\f1\lang1049 ult every local variable of the function is automatic (auto).\par
-\par
-\b What is keyword auto for \f0\lang1033 in C++?\f1\lang1049\par
-\b0\f0\lang1033 Deduces the type of a declared variable from its initialization expression.\par
-\par
-\b What is the meaning of base address of the array?\par
-\b0 Base address is the address of the first element of the array.\par
-\par
-\b Can a program be compiled without main() function?\par
-\b0 Within standard C++ a main function is required.\par
-\par
-\b What is remainder\f1\lang1049  \f0\lang1033 for 5.0 % 2?\par
-\b0 Error. The modulus operator cannot be used for floating-type variables\par
-\par
-\b Which compiler switch to be used for compiling the programs using math library with g++ compiler?\par
-\b0\f1\lang1049 g++ \f3\endash\f1 lm <file.cpp>\par
-That's a linker option. It tells the linker to link with (-l) the m library. That's the math library.\par
-\par
-\b Who designed C++ programming language?\par
-\b0 Bjarne Stroustrup.\par
-\par
-\b How can we refer to the global variable if the local and the global variable names are same?\par
-\b0 We can apply scope resolution operator (::) to the for the scope of global variable.\par
-\par
-\b\f0\lang1033 What is pointer?\par
-\b0 Pointer is a variable that stores the address of another variable.\par
-\par
-\b What is "address of" operator?\par
-\b0 The \lang9 ampersand\lang1033  (&) is a unary operator that returns the memory address of its operand. It should be read as "the address of".\par
-\par
-\b What is dereference operator (indirection operator)?\par
-\b0\f1\lang1049 It is a unary operator that returns the value of the variable located at the address specified by its operand.\par
-\par
-\b What are valid operations on pointers?\par
-\ul\b0 Creation\par
-Assignment\ulnone\par
-\ul Arithmetic\ulnone\par
-\f0\lang1033\tab - Incrementing and decrementing a pointer.\par
-\tab - Adding or subtracting an integer.\f1\lang1049\par
-\ul Comparison\ulnone\par
-\f0\lang1033\tab - Pointers to entries of the same array can be compared using ==, !=, \tab\tab <, >, etc.\par
-\tab - Any pointer can be compared with 0.\par
-\ul Indirection\ulnone\par
-\ul Indexing\ulnone\f1\lang1049\par
-\par
-\b What are available mode of inheritance to inherit one class from another?\par
-\b0 Public, private \f0\lang1033 and\f1\lang1049  protected\f0\lang1033 .\f1\lang1049\par
-\par
-\par
-\b Does an abstract class in C++ need to hold all pure virtual functions?\par
-\b0 Not necessarily, a class having at least one pure virtual function is abstract class too.\par
-\par
-\b What happens if an exception is thrown outside a try block?\par
-\b0 An exception that isn't caught will always terminate the program\f0\lang1033 .\f1\lang1049\par
-\par
-\b Are class functions taken into consideration as part of the object size?\par
-\b0 No, only the class member variables determines the size of the respective class object.\par
-\par
-\b Can we create and empty class? If so what would be the size of such object.\par
-\b0 We can create an empty class and the object size will be 1.\par
-\par
-\b What is std?\par
-\b0\f0\lang1033 Std is namespace of the C++ standard library.\f1\lang1049\par
-\par
-\b What is cout?\par
-\b0 cout is the object of ostream class. The stream \f3\lquote\f1 cout\f3\rquote\f1  is by default connected to console output device.\par
-\par
-\b What is cin?\par
-\b0 cin is the object of istream class. The stream \f3\lquote\f1 cin\f3\rquote\f1  is by default connected to console input device.\par
-\par
-\b If a pointer declared for a class, which operator can be used to access its class members?\par
-\b0 Arrow (->) operator can be used\f0\lang1033 .\f1\lang1049\par
-\par
-\b What is the difference between actual \f0\lang1033 parameters (arguments) \f1\lang1049 and formal parameters?\par
-\b0 When a function is called, the values (expressions) that are passed in the call are called the arguments or actual parameters (both terms mean the same thing).\par
-Formal parameters are written in the function prototype and function header of the definition. Formal parameters are local variables which are assigned values from the arguments when the function is called.\par
-\par
-\b Is 068 a valid octal number?\par
-\b0 No, it contains invalid octal digits.\par
-\par
-\b What is the purpose of #undef preprocessor?\par
-\b0 It will be used to undefine an existing macro definition.\par
-\par
-\b Can we nest multi line comments in a C++ code?\par
-\b0 Multi-line comments start with /* and end with */\f0\lang1033 .\f1\lang1049\par
-\par
-\b What is the order of objects destroyed in the memory?\par
-\b0 The objects are destroyed in the reverse order of their creation.\par
-\par
-\b\f0\lang1033 What is a struct?\par
-\b0 Structure is a collection of variables of different data types under a single name. It is similar to a class in that, both holds a collecion of data of different data types.\par
-\par
-\b What is a union?\f1\lang1049\par
-\b0 Union is similar to struct, unions differ in the aspect that the fields of a union share the same position in memory. The size of the union is the size of its largest field\f0\lang1033 .\f1\lang1049\par
-\par
-\b\f0\lang1033 What is RAII?\par
-\b0 Resource Acquisition Is Initialization or RAII, is a C++ programming technique. RAII guarantees that the resource is available to any function that may access the object (resource availability is a class invariant, eliminating redundant runtime tests). It also guarantees that all resources are released when the lifetime of their controlling object ends, in reverse order of acquisition. Likewise, if resource acquisition fails (the constructor exits with an exception), all resources acquired by every fully-constructed member and base subobject are released in reverse order of initialization.\par
-\par
-\b What is const keyword?\par
-\ul\b0 Const values\ulnone . The const keyword specifies that a variable's value is constant and tells the compiler to prevent the programmer from modifying it.\par
-\ul Const member functions\ulnone . Declaring a member function with the const keyword specifies that the function is a "read-only" function that does not modify the object for which it is called.\par
-\par
-\par
-\b What is sizeof operator?\par
-\b0 The sizeof is a compile-time operator that determines the size, in bytes, of a variable or data type. The result of the sizeof operator is of type size_t.\par
-\par
-\b What is sizeof... operator?\par
-\b0 The sizeof is a compile-time operator that determines the number of elements in a template parameter pack.\f1\lang1049\par
-\par
-\b\f0\lang1033 What is a dangling pointer?\par
-\b0 A pointer pointing to a memory location that has been deleted (or freed) is called dangling pointer.\f1\lang1049\par
-\par
-\b\f0\lang1033 What is a dangling reference?\par
-\b0\f1\lang1049 A dangling reference is a reference to an object that no longer exists\f0\lang1033 .\par
-\par
-\b What is a wild pointer?\par
-\b0 Uninitialized pointers are known as wild pointers because they point to some arbitrary memory location and may cause a program to crash or behave badly.\par
-\f1\lang1049\par
-\b\f0\lang1033 What is a rvalue, lvalue?\par
-\b0 An lvalue is an expression e that may appear on the left or on the right hand side of an assignment, whereas an rvalue is an expression that can only appear on the right hand side of an assignment.\par
-An lvalue is an expression that refers to a memory location and allows us to take the address of that memory location via the & operator. An rvalue is an expression that is not an lvalue.\par
-\f1\lang1049\par
-\b\f0\lang1033 What is a move assignment operator?\par
-\b0 The move assignment operator = is used for transferring a temporary object to an existing object. The parameter of a move assignment operator is an rvalue reference.\par
-If the move assignment operator is not explicitly defined, the compiler generates an implicit move assignment operator.\par
-\f1\lang1049\par
-\b\f0\lang1033 What is constructor member initializer lists?\par
-\b0 The member initializer list is inserted after the constructor parameters. It begins with a colon (:), and then lists each variable to initialize along with the value for that variable separated by a comma.\par
-\par
-\b What is agregate initialization (brace initialization, list initialization)?\par
-\b0 Aggregate initialization means the use of brace-enclosed initializer lists to initialize all members of an aggregate.\par
-\par
-\b What is std::initializer_list?\par
-\b0 std::initializer_list<T> is introduced in C++11 to make initialization uniform in C++. When a compiler sees an initializer list, it automatically converts it into an object of type std::initializer_list. Therefore, if we create a constructor that takes a std::initializer_list parameter, we can create objects using the initializer list as an input.\par
-\par
-\b What is narrowing (narrowing conversion)?\par
-\b0 A narrowing conversion changes a value to a data type that might not be able to hold some of the possible values.\par
-\par
-\b What is a POD?\f1\lang1049\par
-\b0 A Plain Old Data Structure in C++ is an aggregate class\f0\lang1033  (structure)\f1\lang1049  that contains only PODS as members, has no user-defined destructor, no user-defined copy assignment operator, and no nonstatic members of pointer-to-member type.\par
-\par
-\b\f0\lang1033 What is d\f1\lang1049 elegating constructors\f0\lang1033 ?\f1\lang1049\par
-\b0\f0\lang1033 T\f1\lang1049 here are often cases where it would be useful for one constructor to call another constructor in the same class.\f0\lang1033  This feature, called Constructor Delegation, was introduced in C++ 11.\f1\lang1049\par
-\par
-\b\f0\lang1033 What is copy elision?\par
-\b0 T\f1\lang1049 he compilers are required to omit the copy and move construction of class objects, even if the copy/move constructor and the destructor have observable side-effects. The objects are constructed directly into the storage where they would otherwise be copied/moved to.\par
-\par
-\b What is constructor inheritance?\par
-\b0 In C++03 standard constructors cannot be inherited and you need to inherit them manually one by one by calling base implementation on your own. If your compiler supports C++11 standard, there is a constructor inheritance.\par
-The syntax is as follows:\f0\lang1033  using MyClass::MyClass;\f1\lang1049\par
-\par
-\b\f0\lang1033 What is explicit constructor?\par
-\b0 The explicit function specifier controls unwanted implicit type conversions. It can only be used in declarations of constructors within a class declaration.\par
-\par
-\b What is deleted constructor?\par
-\b0 To declare a deleted function, you can append the \ldblquote =delete;\rdblquote  specifier to the end of a function declaration. The compiler prohibits the usage of a deleted function.\par
-\par
-\b What is xvalue?\par
-\b0 An xvalue (an \ldblquote eXpiring\rdblquote  value) refers to an object, usually near the end of its lifetime.\par
-\par
-\b What is std::move function?\par
-\b0 std::move is a standard library function that serves a single purpose -- to convert its argument into an r-value. We can pass an l-value to std::move, and it will return an r-value reference.\f1\lang1049  \f0\lang1033\par
-\f1\lang1049\par
-\b\f0\lang1033 What is std::forward function?\par
-\b0\par
-\par
-\par
-\par
-What is emplace_back function?\par
-\par
-Is it possible to refer directly to a reference in C++?\par
-\par
-\f1\lang1049 === \'f1\'e2\'e5\'f0\'f2\'ea\'e0 \'f1\'f1\'fb\'eb\'ee\'ea\f0\lang1033\par
-\par
-=== pointer to a reference\par
-=== array of references\par
-\par
-\par
-\f1\lang1049 === deducing template arguments\f0\lang1033\par
-=== nullptr\par
-=== foreach (begin, end functions)\par
-=== override\par
-=== final\par
-=== enum class\par
-=== difference between enum and enum class\par
-=== unique_ptr\par
-=== shared_ptr\par
-=== weak_ptr\par
-=== make_shared\par
-\par
-=== lambda functions\par
-\f1\lang1049 === [] \f3\endash  capture specificator\f1 , \'ee\'ef\'f0\'e5\'e4\'e5\'eb\'ff\'e5\'f2 lambda-\'e2\'fb\'f0\'e0\'e6\'e5\'ed\'e8\'e5, \'e2\'ed\'f3\'f2\'f0\'e8 \'fd\'f2\'e8\'f5 \'f1\'ea\'ee\'e1\'ee\'ea \'f2\'e0\'ea\'e6\'e5 \'ec\'ee\'e6\'ed\'ee \'e7\'e0\'e4\'e0\'f2\'fc \'e7\'e0\'f5\'e2\'e0\'f2\'fb\'e2\'e0\'e5\'ec\'fb\'e9 \'ea\'ee\'ed\'f2\'e5\'ea\'f1\'f2.\f3\par
-\f1 === () \f3\endash  argument list\f1  - argument list, \'e7\'e4\'e5\'f1\'fc \'ec\'ee\'e6\'ed\'ee \'e7\'e0\'e4\'e0\'f2\'fc \'f1\'ef\'e8\'f1\'ee\'ea \'ef\'e0\'f0\'e0\'ec\'e5\'f2\'f0\'ee\'e2\f3\par
-\f1 === -> int \f3\endash  \f1\'ee\'e7\'ed\'e0\'f7\'e0\'e5\'f2, \'f7\'f2\'ee \'e2\'ee\'e7\'e2\'f0\'e0\'f9\'e0\'e5\'ec\'ee\'e5 \'e7\'ed\'e0\'f7\'e5\'ed\'e8\'e5 \'e8\'ec\'e5\'e5\'f2 \'f2\'e8\'ef int.\f0\lang1033\par
-\par
-=== assert\par
-=== static assert\par
-=== noexcept\par
-=== rule of three\par
-=== rule of five\par
-=== Rule of zero\par
-\par
-\par
-\f1\lang1049 === most vexing parse\f0\lang1033  \par
-}
- 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What are template keywords in C++?}{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 
+\b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 template, typename, class}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Difference between typename and class in templates?}{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 
+\b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 There is no semantic difference between class and typename in a template-parameter.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Why a non-type template parameter should be a constant integral expression?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Non-constant expressions can't be parsed and substituted during compile-time.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is a container class?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Container class is a class designed to hold and organize multiple instance\hich\af40\dbch\af31505\loch\f40 
+s of another type (either another class, or a fundamental type). By far the most commonly used container in programming is the array, which you have already seen many examples of. Although C++ has built-in array functionality, programmers will often use a
+\hich\af40\dbch\af31505\loch\f40 n\hich\af40\dbch\af31505\loch\f40  array container class (std::array or std::vector) instead because of the additional benefits they provide.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is a preprocessor?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Preprocessor programs provides preprocessors directives which tell the compiler to preprocess the source code before compil
+\hich\af40\dbch\af31505\loch\f40 ing. All of these preprocessor directive begins with a '#' (hash) symbol.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What are the different ways of passing parameters to the functions? Which to use when?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Call by value }{\rtlch\fcs1 \af34\afs20 \ltrch\fcs0 \f34\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\loch\af34\dbch\af31505\hich\f34 \u8722\'3f}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40  we send only values to the function as parameters.
+\par \hich\af40\dbch\af31505\loch\f40 Call by address }{\rtlch\fcs1 \af34\afs20 \ltrch\fcs0 \f34\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \loch\af34\dbch\af31505\hich\f34 \u8722\'3f}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40  we send a\hich\af40\dbch\af31505\loch\f40 ddress of the actual parameters instead of values.
+\par \hich\af40\dbch\af31505\loch\f40 Call by reference }{\rtlch\fcs1 \af34\afs20 \ltrch\fcs0 \f34\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \loch\af34\dbch\af31505\hich\f34 \u8722\'3f}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40  the actual parameters are received with the C++ new reference variables as formal parameters.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Can we resize the allocated memory which was allocated using \hich\f40 \lquote \loch\f40 new\hich\f40 
+\rquote \loch\f40  operator?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 No, there is \hich\af40\dbch\af31505\loch\f40 no such provision available.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Which operator can be used to determine the size of a data type/class or variable/object?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 sizeof
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is recursion?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Function calling itself is called as recursion.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is the difference between delete and delete[]?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 The dele\hich\af40\dbch\af31505\loch\f40 
+te operator deallocates memory and calls the destructor for a single object created with new.
+\par \hich\af40\dbch\af31505\loch\f40 The delete [] operator deallocates memory and calls destructors for an array of objects created with new [].
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Is it legal to assign a base class object to a derived class pointer?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 No, it will be error as the compiler fails to do conversion.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is the full form of STL?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Standard template library
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is the use of the keyword \hich\f40 \lquote \loch\f40 using\hich\f40 \rquote \loch\f40 ?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 It is used to specify the n\hich\af40\dbch\af31505\loch\f40 amespace being used in.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 A}{\rtlch\fcs1 \af34\afs20 \ltrch\fcs0 \f34\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af34\dbch\af31505\loch\f34 
+ }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 typedef}{\rtlch\fcs1 \af34\afs20 \ltrch\fcs0 \f34\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 -}{\rtlch\fcs1 
+\af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 name}{\rtlch\fcs1 \af34\afs20 \ltrch\fcs0 \f34\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af34\dbch\af31505\loch\f34  }{
+\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 can}{\rtlch\fcs1 \af34\afs20 \ltrch\fcs0 \f34\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af34\dbch\af31505\loch\f34 
+ }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 also}{\rtlch\fcs1 \af34\afs20 \ltrch\fcs0 \f34\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af34\dbch\af31505\loch\f34  }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 be}{\rtlch\fcs1 \af34\afs20 \ltrch\fcs0 
+\f34\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af34\dbch\af31505\loch\f34  }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 introduced}{\rtlch\fcs1 \af34\afs20 
+\ltrch\fcs0 \f34\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af34\dbch\af31505\loch\f34  }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 by}{\rtlch\fcs1 
+\af34\afs20 \ltrch\fcs0 \f34\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af34\dbch\af31505\loch\f34  }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 an}{
+\rtlch\fcs1 \af34\afs20 \ltrch\fcs0 \f34\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af34\dbch\af31505\loch\f34  }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+alias}{\rtlch\fcs1 \af34\afs20 \ltrch\fcs0 \f34\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 -}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 declaration}{\rtlch\fcs1 
+\af34\afs20 \ltrch\fcs0 \f34\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 .
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 \hich\f40 
+What is difference between including the header file with-in angular braces < > and double quotes \'93\loch\f40 \hich\f40  \'93}{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 ?}{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 If a header file is included with in <> then the compiler searche\hich\af40\dbch\af31505\loch\f40 \hich\f40 
+s for the particular header file only with in the built in include path. If a header file is included with in \'93\loch\f40 \hich\f40  \'93\loch\f40 
+, then the compiler searches for the particular header file first in the current working directory, if not found then in the built in include \hich\af40\dbch\af31505\loch\f40 p\hich\af40\dbch\af31505\loch\f40 ath}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 .
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is the difference between variable declaration}{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 
+\b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 , }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 definition}{
+\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 , initialization and assignment}{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 
+\b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 ?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Declaration}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 A declaration}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 
+introduces one or more names into a program}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 :}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }\pard \ltrpar\qj \li720\ri0\sl276\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin720\itap0 {\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 void xyz();
+\par \hich\af40\dbch\af31505\loch\f40 class klass;
+\par \hich\af40\dbch\af31505\loch\f40 struct ztruct;
+\par \hich\af40\dbch\af31505\loch\f40 int x;
+\par }\pard \ltrpar\qj \li0\ri0\sl276\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Definition}{\rtlch\fcs1 \af40\afs20 
+\ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 . Definitions}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+specify what code or data the name describes. The compiler needs the definition in order to allocate storage space for the thing that is being declared.
+\par }\pard \ltrpar\qj \li720\ri0\sl276\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin720\itap0 {\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 int x;
+\par \hich\af40\dbch\af31505\loch\f40 void xyz() \{...\}
+\par \hich\af40\dbch\af31505\loch\f40 class klass \{...\};
+\par \hich\af40\dbch\af31505\loch\f40 struct ztruct \{...\};
+\par \hich\af40\dbch\af31505\loch\f40 enum \{ x, y, z \};
+\par }\pard \ltrpar\qj \li0\ri0\sl276\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Initialization}{\rtlch\fcs1 
+\af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 . Initialization of a variable provides its initial value at the time of construction.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Assignment}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . The assignment statement indicates that the value given by the expression on the right hand side of the assignment operator (symbol =) must be stored in the \hich\af40\dbch\af31505\loch\f40 
+variable named on the left hand side.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Which key word is used to perform unconditional branching?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 
+The goto statement transfers control to the location specified by label. The goto statement must be in the same function as the label it is referring, it may \hich\af40\dbch\af31505\loch\f40 appear before or after the label.}{\rtlch\fcs1 \af40\afs20 
+\ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\par \hich\af40\dbch\af31505\loch\f40 The goto statement gives power to jump to any part of program but, makes the logic of the program complex and tangled. In modern programming, goto statement is considered a harmful construct and a bad programming practice.
+}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is big-endian and little-endian?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+Big-endian and little-endian are terms that describe the order in which a sequence of bytes are stored in computer memory. Big-endian is an order in which the "big end" (most significant value in the sequence) is sto\hich\af40\dbch\af31505\loch\f40 
+red first (at the lowest storage address). Little-endian is an order in which the "little end" (least significant value in the sequence) is stored first. For example, in a big-endian computer, the two bytes required for the hexadecimal number 4F52 would b
+\hich\af40\dbch\af31505\loch\f40 e\hich\af40\dbch\af31505\loch\f40 
+ stored as 4F52 in storage (if 4F is stored at storage address 1000, for example, 52 will be at address 1001). In a little-endian system, it would be stored as 524F (52 at address 1000, 4F at 1001).
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What's the difference between MSB and LSB?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 T}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\hich\af40\dbch\af31505\loch\f40 he most sign\hich\af40\dbch\af31505\loch\f40 ificant bit (MSB) is the bit which has the largest value in a multi-bit binary number.}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40  T}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 
+he least significant bit is the bit which is farthest to the right and holds the least value in a multi-bit binary number.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is a token?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 A token is the smallest ele\hich\af40\dbch\af31505\loch\f40 
+ment of a program that is meaningful to the compiler. Tokens can be classified as follows: keywords, identifiers, constants, strings, special symbols, operators.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is const_cast conversion?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 A const_cast operator adds or removes a const or volatile modi\hich\af40\dbch\af31505\loch\f40 fier to or from a type.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is static_cast conversion?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+The static_cast operator performs an explicit type conversion. Static_cast conversions are checked at compile time to prevent obvious incompatibilities.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is dynamic_cast conversion?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Safely conve\hich\af40\dbch\af31505\loch\f40 
+rts pointers and references to classes up, down, and sideways along the inheritance hierarchy.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is reinterpret_cast conversion?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+Allows any pointer to be converted into any other pointer type. Also allows any integral type to be converted into any pointer type and vice versa.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is the difference between static_cast and dynamic_cast convertion?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 dynamic_cast should be used for con\hich\af40\dbch\af31505\loch\f40 
+verting pointers/references within an inheritance hierarchy, static_cast should be used for ordinary type conversions.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Explain the purpose of the keyword volatile.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Declaring a variable volatile directs the compiler that the variable can be changed externa\hich\af40\dbch\af31505\loch\f40 
+lly. Hence avoiding compiler optimization on the variable reference.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is a storage class?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+Storage class of a variable defines the lifetime and visibility of a variable. Lifetime means the duration till which the variable remains active and visibility \hich\af40\dbch\af31505\loch\f40 
+defines in which module of the program the variable is accessible.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Mention the storage classes names in C++.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 There are five types of storage classes in C++. They are:}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 automatic,}{
+\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 external,}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 static,}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 
+\af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 register,}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 mutable.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Where an automatic variable is stored?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Every local variable by default being an auto variable is stored in stack memory.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is the purpose of extern storage specifier?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 The extern keyword tells the compiler that a variable is declared in another source module (outside of the current scope). T
+\hich\af40\dbch\af31505\loch\f40 he linker then finds this actual declaration and sets up the extern variable to point to the correct location.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is role of static keyword?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Static global variable}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . A variable declared as static at the top level of a source file is only visible througho\hich\af40\dbch\af31505\loch\f40 ut that file.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Static function}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . Static function - a function declared as static at the top level of a source file - is only visible throughout that file.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Static local variables}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . A variable declared static within the body of a function maintains its value be\hich\af40\dbch\af31505\loch\f40 tween invocations of the function.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Static member variables}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . Static data members of class are those members which are shared by all the objects. Static member variables (data members) are not initialied using constructor, because these are not dependent on 
+\hich\af40\dbch\af31505\loch\f40 object initialization.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Static method}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . Static method - a method declared as static inside a class definition - are meant to be relevant to all instances of a class rather than any specific instance.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 When should we use the register storage specifier?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+The register storage class specifier indicates to the compiler that the object should be stored in a machine register. The register storage class specifier is typically specified for heavily used variables, such as a loop control variable, in the hopes of
+\hich\af40\dbch\af31505\loch\f40  \hich\af40\dbch\af31505\loch\f40 enhancing performance by minimizing access time. However, the compiler is not required to honor this request.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is the role of mutable storage class specifier?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 If a data member is declared mutable, then it is legal to assign a value to this data me\hich\af40\dbch\af31505\loch\f40 
+mber from a const member function.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Distinguish between shallow copy and deep copy.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Shallow copy}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\hich\af40\dbch\af31505\loch\f40  (also known as a }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 b}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 itwise copy)}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+ does memory dumping bit-by-bit from one object to another. Deep copy (}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 also known as a }{\rtlch\fcs1 
+\af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 memberwise }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\hich\af40\dbch\af31505\loch\f40 copy)}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40  is copy field by field fr\hich\af40\dbch\af31505\loch\f40 
+om object to another. Deep copy is achieved using copy constructor and or overloading assignment operator.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Name the data type which can be used to store wide characters in C++.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 wchar_t
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is operator overloading?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Operator overloading customizes the C++\hich\af40\dbch\af31505\loch\f40  operators for operands of user-defined types.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Name the default standard streams in C++.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 cin, cout, cerr and clog.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Which access specifier/s can help to achive data hiding in C++?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Private & Protected.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Can I use \hich\f40 \lquote \loch\f40 delete\hich\f40 \rquote \loch\f40  operator to release the memory whi
+\hich\af40\dbch\af31505\loch\f40 ch was allocated using malloc() function of C language?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 No, we need to use free() of C language for the same.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Can we implement all the concepts of OOPS using the keyword struct?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Yes.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is the block scope variable in C++?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 
+An object has block scope if its declaration is located inside a block. An object with block scope is visible from the point where it is declared}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40  (opening brace "\{")}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40  to the closing brace }{\rtlch\fcs1 \af40\afs20 
+\ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 "}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \}}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 "}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 
+ that terminates the block.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is the scope resolution operator\hich\af40\dbch\af31505\loch\f40 ?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 In C++, scope resolution operator is ::}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40  (double colon)}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 
+. It is used for following purposes}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 :
+\par \hich\af40\dbch\af31505\loch\f40 - To access a global variable when there is a local variable with same name.
+\par \hich\af40\dbch\af31505\loch\f40 - }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 To define a function outside a class.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 - }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\hich\af40\dbch\af31505\loch\f40 To access a class\hich\f40 \rquote \loch\f40 s static variables.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 - In c\hich\af40\dbch\af31505\loch\f40 ase of multiple Inheritance.}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What are command line arguments?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Command-line arguments}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 
+are passed to a program at runtime by the operating system when the program is requested by another program, such as a command interpreter ("shell") like cmd.exe on Windo\hich\af40\dbch\af31505\loch\f40 ws or bash on Linux}{\rtlch\fcs1 \af40\afs20 
+\ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 . }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 
+All the arguments sent are the strings only.}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is exception?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+A C++ exception is a response to an exceptional circumstance that arises while a program is running, such as an attempt to divide by zero. Exceptions provide a way to tra\hich\af40\dbch\af31505\loch\f40 
+nsfer control from one part of a program to another. C++ exception handling is built upon three keywords: try, catch, and throw.}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Does C++ supports exception handling?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 C++ exception handling is built upon three keywords: try, catch, and throw.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 try}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 \af34\afs20 \ltrch\fcs0 \f34\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \loch\af34\dbch\af31505\hich\f34 \u8722\'3f}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40  A try \hich\af40\dbch\af31505\loch\f40 block identifies a block of code for which particular exceptions will be activated. It's followed by one or more catch blocks.
+}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 
+\par \hich\af40\dbch\af31505\loch\f40 catch}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 \af34\afs20 \ltrch\fcs0 
+\f34\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \loch\af34\dbch\af31505\hich\f34 \u8722\'3f}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+ A program catches an exception with an exception handler at the place in a program where you want to handle the problem. \hich\af40\dbch\af31505\loch\f40 The catch keyword indicates the catching of an exception.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 throw}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 \af34\afs20 \ltrch\fcs0 \f34\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \loch\af34\dbch\af31505\hich\f34 \u8722\'3f}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40  A program throws an exception when a problem shows up. This is done using a throw keyword.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 How can we catch all kind of exceptions in a single catch block?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 catch (...)}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40  will catch all C++ exceptions.}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is keyword auto for }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 
+\b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 in C?}{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Auto def}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\hich\af40\dbch\af31505\loch\f40 ines a local variable as having a local lifetime. }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 By defa}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 ult every local variable of the function is automatic (auto).
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is keyword auto for }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 
+\b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 in C++?}{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Deduces the type of a declared variable from its initialization expression.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is the meaning of base address of the array?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Base address is the address of the first element of the array.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Can a program be compiled without main() function?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Within standar\hich\af40\dbch\af31505\loch\f40 d C++ a main function is required.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is remainder}{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 
+\b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 for 5.0 % 2?
+
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Error. The modulus operator cannot be used for floating-type variables
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Which compiler switch to be used for compiling the programs using math library with g++ compiler?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 g++ \hich\f40 \endash \loch\f40 lm <file.cpp>
+\par \hich\af40\dbch\af31505\loch\f40 That's a linker option. It tells the linker to link with (-l) the m library. That's the math library.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Who designed C++ programming language?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Bjarne Stroustrup.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 How can we refer to the global variable if the local and the global variable names are same?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 W\hich\af40\dbch\af31505\loch\f40 
+e can apply scope resolution operator (::) to the for the scope of global variable.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is pointer?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Pointer is a variable that stores the address of another variable.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is "address of" operator?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 The }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang9\langfe1049\langnp9\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+ampersand}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40  (&) is a unary operator that returns the memory address of its operand. It should be read as "the address of".
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is dereference operator (indirection operator)?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 It is a unary operator that returns the value of the variable located at the address speci
+\hich\af40\dbch\af31505\loch\f40 fied by its operand.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What are valid operations on pointers?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Creation
+\par \hich\af40\dbch\af31505\loch\f40 Assignment}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Arithmetic}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \tab \hich\af40\dbch\af31505\loch\f40 - Incrementing and decrementing a pointer.
+\par \tab \hich\af40\dbch\af31505\loch\f40 - Adding or subtracting an integer.}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Comparison}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \tab \hich\af40\dbch\af31505\loch\f40 - Pointers to entries of the same array can be compared using ==, !=, \tab \tab \hich\af40\dbch\af31505\loch\f40 <, >, etc.
+
+\par \tab \hich\af40\dbch\af31505\loch\f40 - Any pointer can be compared with 0.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Indirection}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Indexing}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What are available mode of inheritance to inherit one class from another?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Public, private }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 and}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40  protected}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 .}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par 
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Does an abstract class in C++ need to hold all pure virtual functions?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Not n\hich\af40\dbch\af31505\loch\f40 
+ecessarily, a class having at least one pure virtual function is abstract class too.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What happens if an exception is thrown outside a try block?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 An exception that isn't caught will always terminate the program}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 .}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Are class functions taken into consid\hich\af40\dbch\af31505\loch\f40 eration as part of the object size?
+
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 No, only the class member variables determines the size of the respective class object.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Can we create and empty class? If so what would be the size of such object.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 We can create an empty class and the object size will b\hich\af40\dbch\af31505\loch\f40 e 1.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is std?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Std is namespace of the C++ standard library.}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is cout?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 cout is the object of ostream class. The stream \hich\f40 \lquote \loch\f40 cout\hich\f40 \rquote \loch\f40 
+ is by default connected to console output device.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is cin?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 cin is the object of istream class. The stream \hich\f40 \lquote \loch\f40 cin\hich\f40 \rquote \loch\f40  is b
+\hich\af40\dbch\af31505\loch\f40 y default connected to console input device.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 If a pointer declared for a class, which operator can be used to access its class members?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Arrow (->) operator can be used}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 .}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is the difference between actual }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 
+\b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 parameters (arguments) }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\hich\af40\dbch\af31505\loch\f40 and formal parameters?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 W\hich\af40\dbch\af31505\loch\f40 
+hen a function is called, the values (expressions) that are passed in the call are called the arguments or actual parameters (both terms mean the same thing).
+\par \hich\af40\dbch\af31505\loch\f40 Formal parameters are written in the function prototype and function header of the definition. Fo\hich\af40\dbch\af31505\loch\f40 
+rmal parameters are local variables which are assigned values from the arguments when the function is called.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Is 068 a valid octal number?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 No, it contains invalid octal digits.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is the purpose of #undef preprocessor?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 It will be used to undefine an existing macro definition.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Can we nest multi line comments in a C++ code?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Multi-line comments start with /* and end with */}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 .}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is the order of objects destroyed in the memory?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 The objects are destroyed in the reverse ord\hich\af40\dbch\af31505\loch\f40 er of their creation.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is a struct?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+Structure is a collection of variables of different data types under a single name. It is similar to a class in that, both holds a collecion of data of different data types.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is a union?}{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 
+\b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 Union is similar to str\hich\af40\dbch\af31505\loch\f40 
+uct, unions differ in the aspect that the fields of a union share the same position in memory. The size of the union is the size of its largest field}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 .}{
+\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is RAII?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Resource Acquisition Is Initialization or RAII, is a C++ programming technique. RAII guara\hich\af40\dbch\af31505\loch\f40 
+ntees that the resource is available to any function that may access the object (resource availability is a class invariant, eliminating redundant runtime tests). It also guarantees that all resources are released when the lifetime of their controlling ob
+\hich\af40\dbch\af31505\loch\f40 j\hich\af40\dbch\af31505\loch\f40 
+ect ends, in reverse order of acquisition. Likewise, if resource acquisition fails (the constructor exits with an exception), all resources acquired by every fully-constructed member and base subobject are released in reverse order of initialization.
+
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What\hich\af40\dbch\af31505\loch\f40  is const keyword?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Const values}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . The const keyword specifies that a variable's value is constant and tells the compiler to prevent the programmer from modifying it.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\ul\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Const member functions}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40 . Declaring a member function with the const keyword specifies that t\hich\af40\dbch\af31505\loch\f40 he function is a "read-only" function that does not modify the object for which it is called.
+\par 
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is sizeof operator?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+The sizeof is a compile-time operator that determines the size, in bytes, of a variable or data type. The result of the sizeof operator\hich\af40\dbch\af31505\loch\f40  is of type size_t.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is sizeof... operator?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 The sizeof is a compile-time operator that determines the number of elements in a template parameter pack.}{\rtlch\fcs1 
+\af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is a dangling pointer?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 A pointer pointing to a memory location that has been deleted (or freed) is called dangling pointer.}{\rtlch\fcs1 \af40\afs20 
+\ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is a dangling reference?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 A dangling reference is a reference to an object that no longer exists}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 .
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is a wild pointer?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Uninitialized pointers are \hich\af40\dbch\af31505\loch\f40 
+known as wild pointers because they point to some arbitrary memory location and may cause a program to crash or behave badly.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is a rvalue, lvalue?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 An lvalue is an expression e that may appear on the left or on the right hand side of an assignment, wh
+\hich\af40\dbch\af31505\loch\f40 ereas an rvalue is an expression that can only appear on the right hand side of an assignment.
+\par \hich\af40\dbch\af31505\loch\f40 An lvalue is an expression that refers to a memory location and allows us to take the address of that memory location via the & operator. An rvalue is an express\hich\af40\dbch\af31505\loch\f40 ion that is not an lvalue.
+
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is a move assignment operator?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+The move assignment operator = is used for transferring a temporary object to an existing object. The parameter of a move assignment operator is an rvalue reference.
+\par \hich\af40\dbch\af31505\loch\f40 If the move assignment ope\hich\af40\dbch\af31505\loch\f40 rator is not explicitly defined, the compiler generates an implicit move assignment operator.
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is constructor member initializer lists?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 The member initializer list is inserted after the constructor parameters. It begins with a colon (:), and then list
+\hich\af40\dbch\af31505\loch\f40 s each variable to initialize along with the value for that variable separated by a comma.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is agregate initialization (brace initialization, list initialization)?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 Aggregate initialization means the use of brace-enclosed initializer lists to initializ\hich\af40\dbch\af31505\loch\f40 
+e all members of an aggregate.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is std::initializer_list?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+std::initializer_list<T> is introduced in C++11 to make initialization uniform in C++. When a compiler sees an initializer list, it automatically converts it into an object of type std::initializer_list. Therefore, if we create a constructor that takes a 
+\hich\af40\dbch\af31505\loch\f40 s\hich\af40\dbch\af31505\loch\f40 td::initializer_list parameter, we can create objects using the initializer list as an input.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is narrowing (narrowing conversion)?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 A narrowing conversion changes a value to a data type that might not be able to hold some of the possible values.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is a POD?}{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 
+\b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 A Plain Old Data Structure in C++ is an aggregate class}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40  (structure)}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 
+ that contains only PODS as members, has no user-defined destructor, no user-defined copy assignment operator, and no nonstatic members of pointer-to-member type.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is d}{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 
+\b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 e\hich\af40\dbch\af31505\loch\f40 legating constructors}{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 
+\b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 ?}{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 T}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\hich\af40\dbch\af31505\loch\f40 here are often cases where it would be useful for one constructor to call another constructor in the same class.}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40  This feature, called Constructor Delegation, was introduced in C++ 11.}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is copy elision?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 T}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\hich\af40\dbch\af31505\loch\f40 he compilers are require\hich\af40\dbch\af31505\loch\f40 
+d to omit the copy and move construction of class objects, even if the copy/move constructor and the destructor have observable side-effects. The objects are constructed directly into the storage where they would otherwise be copied/moved to.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 What is cons\hich\af40\dbch\af31505\loch\f40 tructor inheritance?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 
+In C++03 standard constructors cannot be inherited and you need to inherit them manually one by one by calling base implementation on your own. If your compiler supports C++11 standard, there is a constructor inheritance.
+\par \hich\af40\dbch\af31505\loch\f40 The syntax is\hich\af40\dbch\af31505\loch\f40  as follows:}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40  using MyClass::MyClass;}{
+\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is explicit constructor?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+The explicit function specifier controls unwanted implicit type conversions. It can only be used in declarations of constructors within a class declaration.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is deleted constructor?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 T\hich\af40\dbch\af31505\loch\f40 \hich\f40 o declare a deleted function, you can append the \'93\loch\f40 \hich\f40 =delete;
+\'94\loch\f40  specifier to the end of a function declaration. The compiler prohibits the usage of a deleted function.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is xvalue?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 \hich\f40 An xvalue (an \'93\loch\f40 \hich\f40 eXpiring\'94\loch\f40  value) refers to an object, usually near the end o
+\hich\af40\dbch\af31505\loch\f40 f its lifetime.
+\par 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is std::move function?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 
+std::move is a standard library function that serves a single purpose -- to convert its argument into an r-value. We can pass an l-value to std::move, and it will return an r-value reference.}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\insrsid3891094 
+\hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\insrsid3891094 
+\par }{\rtlch\fcs1 \ab\af40\afs20 \ltrch\fcs0 \b\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 What is std::forward function?
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\par 
+\par 
+\par 
+\par \hich\af40\dbch\af31505\loch\f40 What is emplace_back function?
+\par 
+\par \hich\af40\dbch\af31505\loch\f40 Is it possible to refer directly to a reference in C++?
+\par 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 \hich\f40 === \'f1\'e2\'e5\'f0\'f2\'ea\'e0\loch\f40 \hich\f40  \'f1\'f1\'fb\'eb\'ee\'ea}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\par 
+\par \hich\af40\dbch\af31505\loch\f40 === pointer to a reference
+\par \hich\af40\dbch\af31505\loch\f40 === array of references
+\par 
+\par 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 === deducing template arguments}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 
+\par \hich\af40\dbch\af31505\loch\f40 === nullptr
+\par \hich\af40\dbch\af31505\loch\f40 === foreach (be\hich\af40\dbch\af31505\loch\f40 gin, end functions)
+\par \hich\af40\dbch\af31505\loch\f40 === override
+\par \hich\af40\dbch\af31505\loch\f40 === final
+\par \hich\af40\dbch\af31505\loch\f40 === enum class
+\par \hich\af40\dbch\af31505\loch\f40 === difference between enum and enum class
+\par \hich\af40\dbch\af31505\loch\f40 === unique_ptr
+\par \hich\af40\dbch\af31505\loch\f40 === shared_ptr
+\par \hich\af40\dbch\af31505\loch\f40 === weak_ptr
+\par \hich\af40\dbch\af31505\loch\f40 === make_shared
+\par 
+\par \hich\af40\dbch\af31505\loch\f40 === lambda functions
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40 === [] \hich\f40 \endash \loch\f40  capture specificator, }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\insrsid3891094 \loch\af40\dbch\af31505\hich\f40 \'ee\'ef\'f0\'e5\'e4\'e5\'eb\'ff\'e5\'f2}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40  lambda-}{
+\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\insrsid3891094 \loch\af40\dbch\af31505\hich\f40 \'e2\'fb\'f0\'e0\'e6\'e5\'ed\'e8\'e5}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\hich\af40\dbch\af31505\loch\f40 , }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\insrsid3891094 \loch\af40\dbch\af31505\hich\f40 \'e2\'ed\'f3\'f2\'f0\'e8}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\insrsid3891094 \loch\af40\dbch\af31505\hich\f40 \'fd\'f2\'e8\'f5}{\rtlch\fcs1 \af40\afs20 
+\ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\insrsid3891094 \loch\af40\dbch\af31505\hich\f40 \'f1\'ea\loch\af40\dbch\af31505\hich\f40 
+\'ee\'e1\'ee\'ea}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\insrsid3891094 
+\loch\af40\dbch\af31505\hich\f40 \'f2\'e0\'ea\'e6\'e5}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\insrsid3891094 \loch\af40\dbch\af31505\hich\f40 \'ec\'ee\'e6\'ed\'ee}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 \af40\afs20 
+\ltrch\fcs0 \f40\fs20\insrsid3891094 \loch\af40\dbch\af31505\hich\f40 \'e7\'e0\'e4\'e0\'f2\'fc}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 \hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 
+\af40\afs20 \ltrch\fcs0 \f40\fs20\insrsid3891094 \loch\af40\dbch\af31505\hich\f40 \'e7\'e0\'f5\'e2\'e0\'f2\'fb\'e2\'e0\'e5\'ec\'fb\'e9}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 
+\hich\af40\dbch\af31505\loch\f40  }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\insrsid3891094 \loch\af40\dbch\af31505\hich\f40 \'ea\'ee\'ed\'f2\'e5\'ea\'f1\'f2}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 
+\f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094\charrsid1639920 .
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 === () \hich\f40 \endash \loch\f40 \hich\f40  argument list - argument list, \'e7\'e4\'e5\'f1\'fc\loch\f40 \hich\f40  \'ec\'ee\'e6\'ed\'ee\loch\f40 \hich\f40  
+\'e7\'e0\'e4\'e0\'f2\'fc\loch\f40 \hich\f40  \'f1\'ef\'e8\'f1\'ee\'ea\loch\f40 \hich\f40  \'ef\'e0\'f0\'e0\'ec\'e5\'f2\'f0\'ee\'e2
+\par \hich\af40\dbch\af31505\loch\f40 === -> int \hich\f40 \endash \loch\f40 \hich\f40  \'ee\'e7\'ed\'e0\'f7\'e0\'e5\'f2\loch\f40 \hich\f40 , \'f7\'f2\'ee\loch\f40 \hich\f40  \'e2\'ee\'e7\'e2\'f0\'e0\'f9\'e0\'e5\'ec\'ee\'e5\loch\f40 \hich\f40  \'e7\'ed\'e0\'f7
+\'e5\'ed\'e8\'e5\loch\f40 \hich\f40  \'e8\'ec\'e5\'e5\'f2\loch\f40 \hich\f40  \'f2\'e8\'ef\loch\f40  int.}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\insrsid3891094\charrsid1639920 
+\par 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 === assert
+\par \hich\af40\dbch\af31505\loch\f40 === static assert
+\par \hich\af40\dbch\af31505\loch\f40 === noexcept
+\par \hich\af40\dbch\af31505\loch\f40 === rule of three
+\par \hich\af40\dbch\af31505\loch\f40 === ru\hich\af40\dbch\af31505\loch\f40 le of five
+\par \hich\af40\dbch\af31505\loch\f40 === Rule of zero
+\par 
+\par 
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\insrsid3891094 \hich\af40\dbch\af31505\loch\f40 === most vexing parse}{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid3891094 \hich\af40\dbch\af31505\loch\f40  
+\par }{\rtlch\fcs1 \af40\afs20 \ltrch\fcs0 \f40\fs20\lang1033\langfe1049\langnp1033\insrsid1639920 \hich\af40\dbch\af31505\loch\f40 === SOLID
+\par \hich\af40\dbch\af31505\loch\f40 === patterns
+\par }{\*\themedata 504b030414000600080000002100e9de0fbfff0000001c020000130000005b436f6e74656e745f54797065735d2e786d6cac91cb4ec3301045f748fc83e52d4a
+9cb2400825e982c78ec7a27cc0c8992416c9d8b2a755fbf74cd25442a820166c2cd933f79e3be372bd1f07b5c3989ca74aaff2422b24eb1b475da5df374fd9ad
+5689811a183c61a50f98f4babebc2837878049899a52a57be670674cb23d8e90721f90a4d2fa3802cb35762680fd800ecd7551dc18eb899138e3c943d7e503b6
+b01d583deee5f99824e290b4ba3f364eac4a430883b3c092d4eca8f946c916422ecab927f52ea42b89a1cd59c254f919b0e85e6535d135a8de20f20b8c12c3b0
+0c895fcf6720192de6bf3b9e89ecdbd6596cbcdd8eb28e7c365ecc4ec1ff1460f53fe813d3cc7f5b7f020000ffff0300504b030414000600080000002100a5d6
+a7e7c0000000360100000b0000005f72656c732f2e72656c73848fcf6ac3300c87ef85bd83d17d51d2c31825762fa590432fa37d00e1287f68221bdb1bebdb4f
+c7060abb0884a4eff7a93dfeae8bf9e194e720169aaa06c3e2433fcb68e1763dbf7f82c985a4a725085b787086a37bdbb55fbc50d1a33ccd311ba548b6309512
+0f88d94fbc52ae4264d1c910d24a45db3462247fa791715fd71f989e19e0364cd3f51652d73760ae8fa8c9ffb3c330cc9e4fc17faf2ce545046e37944c69e462
+a1a82fe353bd90a865aad41ed0b5b8f9d6fd010000ffff0300504b0304140006000800000021006b799616830000008a0000001c0000007468656d652f746865
+6d652f7468656d654d616e616765722e786d6c0ccc4d0ac3201040e17da17790d93763bb284562b2cbaebbf600439c1a41c7a0d29fdbd7e5e38337cedf14d59b
+4b0d592c9c070d8a65cd2e88b7f07c2ca71ba8da481cc52c6ce1c715e6e97818c9b48d13df49c873517d23d59085adb5dd20d6b52bd521ef2cdd5eb9246a3d8b
+4757e8d3f729e245eb2b260a0238fd010000ffff0300504b03041400060008000000210054b663bbf5060000c21a0000160000007468656d652f7468656d652f
+7468656d65312e786d6cec59dd8e133714beafd47718cd7dc8df4c7e5604944c126861019140c5a5377132663de368ecec1221240457bd69558956bd2852db9b
+5e5455572a555155d457589e0109d4d287e8b16732b1132f2c2b2aa18a5d6977e27ce7f8f33967bee3199f3e7b2ba2ce1e4e386171cb2d9f2ab90e8e476c4ce2
+69cbbd36ec171aaec3058ac788b218b7dc05e6eed9331f7e701a6d891047d801fb986fa1961b0a31db2a16f90886113fc5663886ef262c8990808fc9b4384ed0
+3ef88d68b1522ad58a1122b1ebc42802b787df1ffe7af8c7e1817379322123ec9e59faef519824165c0e8c683290def1d2e8bba7f70e0f0e9f1c3e3a3c787a17
+ae9fc0ffcf95ed78b72c2df882073471f6106db930f598ed0ff12de13a1471015fb4dc92fa718b674e17d1566644c511b69a5d5ffd647699c178b7a2e64ca63b
+f9a49ee77bb576ee5f01a8d8c4f5eabd5aaf96fb5300341ac1ca532eba4fbfd3ec74fd0cab81d24b8bef6ebd5b2d1b78cd7f758373db97bf065e8152ffde06be
+df0f208a065e8152bcbf81f7bc7a25f00cbc02a5f8da06be5e6a77bdba8157a090927877035df26bd560b9da1c3261f4bc15def4bd7ebd92395fa1a01af26a93
+534c582c8e5b7b11bac9923e1848438a04891db198e1091a41a10788929d843817c93484429ca19871182e554afd5215feca5f4f5da908a12d8c346bc91398f1
+8d21c9cfe1a384cc44cbfd18bcba1ae4f9e3c7cfee3d7a76efb767f7ef3fbbf77336b77265d89d47f154b77bf9c317ff3cbcebfcfdcbb72f1f7c994ebd8ee73a
+fec54f9fbef8fdcf57b98715af42f1fcab83178f0e9e7ffdd95f3f3eb0786f276847870f4984b97309ef3b5759040bb4f0c73bc99b590c4344748b763ce52846
+72168bff9e080df4a505a2c882eb60338ed713901e1bf0dcfca64178102673412c1e2f849101dc668c7658628dc205399716e6e13c9eda274fe63aee2a427bb6
+b903141b59eecd67a0c1c4e63208b141f30a45b140531c63e1c8efd82ec696d5dd20c488eb3619258cb389706e10a78388352443b26354d3cae83c89202f0b1b
+41c8b7119bedeb4e8751dbaabb78cf44c2bd81a885fc1053238ce7d05ca0c8e6728822aa07fc2212a18de460918c745c8f0bc8f41453e6f4c698739bcde504d6
+ab25fd02c88c3deddb741199c844905d9bcf8b88311dd965bb4188a2990d3b2071a8633fe2bb50a2c8b9c2840dbecdcc3b447e863ca0f8c8745f27d848f7ebd5
+e01a28ac4e695520f29b7962c9e539cc8cfa1d2ce804612535d0100c5d8f48fc5a915f9377ffbf937710d1e7df3cb4ace8ed48baddb1918f3714f37642ac77d3
+f935093f0ab72edc014bc6e4ddd7ed2e9ac75730dc2a9bcdebbd6cbf976df77f2fdb47ddcf6f5fac57fa0cd22db7ade9f65d6de6a363efe52784d28158507c91
+abed3c872e35eec3a0f4a31e7571feac370be152ded930a1819b2648d93809139f10110e4234833d7fd9954ea63c733de5ce8c71781450c356df124fe7d1361b
+a78fb4e5b27c7c4dc58423b11a2ff9f9383c7e88145dabaf1ed372f78aed543d5e2f0948db3721a14d6692a85a48d497833248ea611e826621a156f65658342d
+2c1ad2fd32551b2c805a9e15d84639b0f96ab9be072660044f5988e2b1cc539aea65765532df66a68f0aa65101b0a75856c02ad34dc9f5c8e5c9d5a5a5768c4c
+1b24b4723349a8c8a89ec64334c65975cad1e3d078d35c37572935e8c950a8f9a0b45634ea8d57b13869aec16e5d1b68ac2b058d9dfd965babfa503223346bb9
+1378150097d10c6a87cbed2fa25378e53612497ac39f44596609175dc4c334e04a7452358888c0894349d472e5f2f334d0586988e256ae8020bcb3e49a202bef
+1a3948ba99643c99e091d0d3ae8dc848a71f41e153adb07eabcc4f0e96966c0ee91e84e37d6787ce93ab084accaf976500c784c31ba1721acd3181579eb990ad
+ea6fad3165b2abbf735435948e233a0b51d65174314fe14aca733aea531e03ed53b66608a81692ac11ee4c6583d5836a74d3bc6ba41c8eecbaaf379291d34473
+d5330d55915dd3ae62c60ccb36b016cb9335798dd532c4a0697a874fa57b5d729b4bad5bdb27e45d02029ec7cfd2758fd110346aabc90c6a92f1a60c4bcdce46
+cddeb15ce06ba81da74968aa5f5bba5d8b5bde23acd3c1e0893a3fd8ad572d0c4d96fb4c1569755ca21f67b09d9b201e5d78313ca782ab54c2e1448260433450
+7b925436e016b925b25b03ae9c79425aeeed92dff6828a1f144a0dbf57f0aa5ea9d0f0dbd542dbf7abe59e5f2e753b953bd058441895fdf4a8a60fafa5e8223b
+b051e31b8736d1f2cddba9118b8a4c9dc5141571756853ae188736e9598d33944732ae4340746ed72afd66b5d9a9159ad576bfe0753b8d4233a8750add5a50ef
+f6bb81df68f6efb8ce9e027bed6ae0d57a8d42ad1c0405af5692f41bcd42ddab54da5ebddde879ed3bd93606569eca47160b08afe275e65f000000ffff030050
+4b0304140006000800000021000dd1909fb60000001b010000270000007468656d652f7468656d652f5f72656c732f7468656d654d616e616765722e786d6c2e
+72656c73848f4d0ac2301484f78277086f6fd3ba109126dd88d0add40384e4350d363f2451eced0dae2c082e8761be9969bb979dc9136332de3168aa1a083ae9
+95719ac16db8ec8e4052164e89d93b64b060828e6f37ed1567914b284d262452282e3198720e274a939cd08a54f980ae38a38f56e422a3a641c8bbd048f7757d
+a0f19b017cc524bd62107bd5001996509affb3fd381a89672f1f165dfe514173d9850528a2c6cce0239baa4c04ca5bbabac4df000000ffff0300504b01022d00
+14000600080000002100e9de0fbfff0000001c0200001300000000000000000000000000000000005b436f6e74656e745f54797065735d2e786d6c504b01022d
+0014000600080000002100a5d6a7e7c0000000360100000b00000000000000000000000000300100005f72656c732f2e72656c73504b01022d00140006000800
+000021006b799616830000008a0000001c00000000000000000000000000190200007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b
+01022d001400060008000000210054b663bbf5060000c21a00001600000000000000000000000000d60200007468656d652f7468656d652f7468656d65312e78
+6d6c504b01022d00140006000800000021000dd1909fb60000001b0100002700000000000000000000000000ff0900007468656d652f7468656d652f5f72656c732f7468656d654d616e616765722e786d6c2e72656c73504b050600000000050005005d010000fa0a00000000}
+{\*\colorschememapping 3c3f786d6c2076657273696f6e3d22312e302220656e636f64696e673d225554462d3822207374616e64616c6f6e653d22796573223f3e0d0a3c613a636c724d
+617020786d6c6e733a613d22687474703a2f2f736368656d61732e6f70656e786d6c666f726d6174732e6f72672f64726177696e676d6c2f323030362f6d6169
+6e22206267313d226c743122207478313d22646b3122206267323d226c743222207478323d22646b322220616363656e74313d22616363656e74312220616363
+656e74323d22616363656e74322220616363656e74333d22616363656e74332220616363656e74343d22616363656e74342220616363656e74353d22616363656e74352220616363656e74363d22616363656e74362220686c696e6b3d22686c696e6b2220666f6c486c696e6b3d22666f6c486c696e6b222f3e}
+{\*\latentstyles\lsdstimax371\lsdlockeddef0\lsdsemihiddendef0\lsdunhideuseddef0\lsdqformatdef0\lsdprioritydef99{\lsdlockedexcept \lsdqformat1 \lsdpriority0 \lsdlocked0 Normal;\lsdqformat1 \lsdpriority9 \lsdlocked0 heading 1;
+\lsdsemihidden1 \lsdunhideused1 \lsdqformat1 \lsdpriority9 \lsdlocked0 heading 2;\lsdsemihidden1 \lsdunhideused1 \lsdqformat1 \lsdpriority9 \lsdlocked0 heading 3;\lsdsemihidden1 \lsdunhideused1 \lsdqformat1 \lsdpriority9 \lsdlocked0 heading 4;
+\lsdsemihidden1 \lsdunhideused1 \lsdqformat1 \lsdpriority9 \lsdlocked0 heading 5;\lsdsemihidden1 \lsdunhideused1 \lsdqformat1 \lsdpriority9 \lsdlocked0 heading 6;\lsdsemihidden1 \lsdunhideused1 \lsdqformat1 \lsdpriority9 \lsdlocked0 heading 7;
+\lsdsemihidden1 \lsdunhideused1 \lsdqformat1 \lsdpriority9 \lsdlocked0 heading 8;\lsdsemihidden1 \lsdunhideused1 \lsdqformat1 \lsdpriority9 \lsdlocked0 heading 9;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 index 1;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 index 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 index 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 index 4;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 index 5;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 index 6;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 index 7;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 index 8;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 index 9;
+\lsdsemihidden1 \lsdunhideused1 \lsdpriority39 \lsdlocked0 toc 1;\lsdsemihidden1 \lsdunhideused1 \lsdpriority39 \lsdlocked0 toc 2;\lsdsemihidden1 \lsdunhideused1 \lsdpriority39 \lsdlocked0 toc 3;
+\lsdsemihidden1 \lsdunhideused1 \lsdpriority39 \lsdlocked0 toc 4;\lsdsemihidden1 \lsdunhideused1 \lsdpriority39 \lsdlocked0 toc 5;\lsdsemihidden1 \lsdunhideused1 \lsdpriority39 \lsdlocked0 toc 6;
+\lsdsemihidden1 \lsdunhideused1 \lsdpriority39 \lsdlocked0 toc 7;\lsdsemihidden1 \lsdunhideused1 \lsdpriority39 \lsdlocked0 toc 8;\lsdsemihidden1 \lsdunhideused1 \lsdpriority39 \lsdlocked0 toc 9;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Normal Indent;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 footnote text;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 annotation text;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 header;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 footer;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 index heading;\lsdsemihidden1 \lsdunhideused1 \lsdqformat1 \lsdpriority35 \lsdlocked0 caption;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 table of figures;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 envelope address;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 envelope return;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 footnote reference;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 annotation reference;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 line number;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 page number;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 endnote reference;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 endnote text;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 table of authorities;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 macro;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 toa heading;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Bullet;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Number;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List 3;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List 4;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List 5;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Bullet 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Bullet 3;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Bullet 4;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Bullet 5;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Number 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Number 3;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Number 4;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Number 5;\lsdqformat1 \lsdpriority10 \lsdlocked0 Title;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Closing;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Signature;\lsdsemihidden1 \lsdunhideused1 \lsdpriority1 \lsdlocked0 Default Paragraph Font;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Body Text;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Body Text Indent;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Continue;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Continue 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Continue 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Continue 4;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 List Continue 5;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Message Header;\lsdqformat1 \lsdpriority11 \lsdlocked0 Subtitle;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Salutation;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Date;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Body Text First Indent;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Body Text First Indent 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Note Heading;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Body Text 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Body Text 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Body Text Indent 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Body Text Indent 3;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Block Text;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Hyperlink;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 FollowedHyperlink;\lsdqformat1 \lsdpriority22 \lsdlocked0 Strong;
+\lsdqformat1 \lsdpriority20 \lsdlocked0 Emphasis;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Document Map;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Plain Text;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 E-mail Signature;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Top of Form;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Bottom of Form;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Normal (Web);\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Acronym;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Address;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Cite;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Code;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Definition;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Keyboard;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Preformatted;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Sample;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Typewriter;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 HTML Variable;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Normal Table;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 annotation subject;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 No List;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Outline List 1;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Outline List 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Outline List 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Simple 1;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Simple 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Simple 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Classic 1;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Classic 2;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Classic 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Classic 4;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Colorful 1;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Colorful 2;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Colorful 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Columns 1;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Columns 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Columns 3;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Columns 4;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Columns 5;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Grid 1;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Grid 2;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Grid 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Grid 4;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Grid 5;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Grid 6;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Grid 7;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Grid 8;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table List 1;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table List 2;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table List 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table List 4;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table List 5;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table List 6;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table List 7;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table List 8;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table 3D effects 1;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table 3D effects 2;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table 3D effects 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Contemporary;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Elegant;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Professional;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Subtle 1;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Subtle 2;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Web 1;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Web 2;
+\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Web 3;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Balloon Text;\lsdpriority39 \lsdlocked0 Table Grid;\lsdsemihidden1 \lsdunhideused1 \lsdlocked0 Table Theme;\lsdsemihidden1 \lsdlocked0 Placeholder Text;
+\lsdqformat1 \lsdpriority1 \lsdlocked0 No Spacing;\lsdpriority60 \lsdlocked0 Light Shading;\lsdpriority61 \lsdlocked0 Light List;\lsdpriority62 \lsdlocked0 Light Grid;\lsdpriority63 \lsdlocked0 Medium Shading 1;\lsdpriority64 \lsdlocked0 Medium Shading 2;
+\lsdpriority65 \lsdlocked0 Medium List 1;\lsdpriority66 \lsdlocked0 Medium List 2;\lsdpriority67 \lsdlocked0 Medium Grid 1;\lsdpriority68 \lsdlocked0 Medium Grid 2;\lsdpriority69 \lsdlocked0 Medium Grid 3;\lsdpriority70 \lsdlocked0 Dark List;
+\lsdpriority71 \lsdlocked0 Colorful Shading;\lsdpriority72 \lsdlocked0 Colorful List;\lsdpriority73 \lsdlocked0 Colorful Grid;\lsdpriority60 \lsdlocked0 Light Shading Accent 1;\lsdpriority61 \lsdlocked0 Light List Accent 1;
+\lsdpriority62 \lsdlocked0 Light Grid Accent 1;\lsdpriority63 \lsdlocked0 Medium Shading 1 Accent 1;\lsdpriority64 \lsdlocked0 Medium Shading 2 Accent 1;\lsdpriority65 \lsdlocked0 Medium List 1 Accent 1;\lsdsemihidden1 \lsdlocked0 Revision;
+\lsdqformat1 \lsdpriority34 \lsdlocked0 List Paragraph;\lsdqformat1 \lsdpriority29 \lsdlocked0 Quote;\lsdqformat1 \lsdpriority30 \lsdlocked0 Intense Quote;\lsdpriority66 \lsdlocked0 Medium List 2 Accent 1;\lsdpriority67 \lsdlocked0 Medium Grid 1 Accent 1;
+\lsdpriority68 \lsdlocked0 Medium Grid 2 Accent 1;\lsdpriority69 \lsdlocked0 Medium Grid 3 Accent 1;\lsdpriority70 \lsdlocked0 Dark List Accent 1;\lsdpriority71 \lsdlocked0 Colorful Shading Accent 1;\lsdpriority72 \lsdlocked0 Colorful List Accent 1;
+\lsdpriority73 \lsdlocked0 Colorful Grid Accent 1;\lsdpriority60 \lsdlocked0 Light Shading Accent 2;\lsdpriority61 \lsdlocked0 Light List Accent 2;\lsdpriority62 \lsdlocked0 Light Grid Accent 2;\lsdpriority63 \lsdlocked0 Medium Shading 1 Accent 2;
+\lsdpriority64 \lsdlocked0 Medium Shading 2 Accent 2;\lsdpriority65 \lsdlocked0 Medium List 1 Accent 2;\lsdpriority66 \lsdlocked0 Medium List 2 Accent 2;\lsdpriority67 \lsdlocked0 Medium Grid 1 Accent 2;\lsdpriority68 \lsdlocked0 Medium Grid 2 Accent 2;
+\lsdpriority69 \lsdlocked0 Medium Grid 3 Accent 2;\lsdpriority70 \lsdlocked0 Dark List Accent 2;\lsdpriority71 \lsdlocked0 Colorful Shading Accent 2;\lsdpriority72 \lsdlocked0 Colorful List Accent 2;\lsdpriority73 \lsdlocked0 Colorful Grid Accent 2;
+\lsdpriority60 \lsdlocked0 Light Shading Accent 3;\lsdpriority61 \lsdlocked0 Light List Accent 3;\lsdpriority62 \lsdlocked0 Light Grid Accent 3;\lsdpriority63 \lsdlocked0 Medium Shading 1 Accent 3;\lsdpriority64 \lsdlocked0 Medium Shading 2 Accent 3;
+\lsdpriority65 \lsdlocked0 Medium List 1 Accent 3;\lsdpriority66 \lsdlocked0 Medium List 2 Accent 3;\lsdpriority67 \lsdlocked0 Medium Grid 1 Accent 3;\lsdpriority68 \lsdlocked0 Medium Grid 2 Accent 3;\lsdpriority69 \lsdlocked0 Medium Grid 3 Accent 3;
+\lsdpriority70 \lsdlocked0 Dark List Accent 3;\lsdpriority71 \lsdlocked0 Colorful Shading Accent 3;\lsdpriority72 \lsdlocked0 Colorful List Accent 3;\lsdpriority73 \lsdlocked0 Colorful Grid Accent 3;\lsdpriority60 \lsdlocked0 Light Shading Accent 4;
+\lsdpriority61 \lsdlocked0 Light List Accent 4;\lsdpriority62 \lsdlocked0 Light Grid Accent 4;\lsdpriority63 \lsdlocked0 Medium Shading 1 Accent 4;\lsdpriority64 \lsdlocked0 Medium Shading 2 Accent 4;\lsdpriority65 \lsdlocked0 Medium List 1 Accent 4;
+\lsdpriority66 \lsdlocked0 Medium List 2 Accent 4;\lsdpriority67 \lsdlocked0 Medium Grid 1 Accent 4;\lsdpriority68 \lsdlocked0 Medium Grid 2 Accent 4;\lsdpriority69 \lsdlocked0 Medium Grid 3 Accent 4;\lsdpriority70 \lsdlocked0 Dark List Accent 4;
+\lsdpriority71 \lsdlocked0 Colorful Shading Accent 4;\lsdpriority72 \lsdlocked0 Colorful List Accent 4;\lsdpriority73 \lsdlocked0 Colorful Grid Accent 4;\lsdpriority60 \lsdlocked0 Light Shading Accent 5;\lsdpriority61 \lsdlocked0 Light List Accent 5;
+\lsdpriority62 \lsdlocked0 Light Grid Accent 5;\lsdpriority63 \lsdlocked0 Medium Shading 1 Accent 5;\lsdpriority64 \lsdlocked0 Medium Shading 2 Accent 5;\lsdpriority65 \lsdlocked0 Medium List 1 Accent 5;\lsdpriority66 \lsdlocked0 Medium List 2 Accent 5;
+\lsdpriority67 \lsdlocked0 Medium Grid 1 Accent 5;\lsdpriority68 \lsdlocked0 Medium Grid 2 Accent 5;\lsdpriority69 \lsdlocked0 Medium Grid 3 Accent 5;\lsdpriority70 \lsdlocked0 Dark List Accent 5;\lsdpriority71 \lsdlocked0 Colorful Shading Accent 5;
+\lsdpriority72 \lsdlocked0 Colorful List Accent 5;\lsdpriority73 \lsdlocked0 Colorful Grid Accent 5;\lsdpriority60 \lsdlocked0 Light Shading Accent 6;\lsdpriority61 \lsdlocked0 Light List Accent 6;\lsdpriority62 \lsdlocked0 Light Grid Accent 6;
+\lsdpriority63 \lsdlocked0 Medium Shading 1 Accent 6;\lsdpriority64 \lsdlocked0 Medium Shading 2 Accent 6;\lsdpriority65 \lsdlocked0 Medium List 1 Accent 6;\lsdpriority66 \lsdlocked0 Medium List 2 Accent 6;
+\lsdpriority67 \lsdlocked0 Medium Grid 1 Accent 6;\lsdpriority68 \lsdlocked0 Medium Grid 2 Accent 6;\lsdpriority69 \lsdlocked0 Medium Grid 3 Accent 6;\lsdpriority70 \lsdlocked0 Dark List Accent 6;\lsdpriority71 \lsdlocked0 Colorful Shading Accent 6;
+\lsdpriority72 \lsdlocked0 Colorful List Accent 6;\lsdpriority73 \lsdlocked0 Colorful Grid Accent 6;\lsdqformat1 \lsdpriority19 \lsdlocked0 Subtle Emphasis;\lsdqformat1 \lsdpriority21 \lsdlocked0 Intense Emphasis;
+\lsdqformat1 \lsdpriority31 \lsdlocked0 Subtle Reference;\lsdqformat1 \lsdpriority32 \lsdlocked0 Intense Reference;\lsdqformat1 \lsdpriority33 \lsdlocked0 Book Title;\lsdsemihidden1 \lsdunhideused1 \lsdpriority37 \lsdlocked0 Bibliography;
+\lsdsemihidden1 \lsdunhideused1 \lsdqformat1 \lsdpriority39 \lsdlocked0 TOC Heading;\lsdpriority41 \lsdlocked0 Plain Table 1;\lsdpriority42 \lsdlocked0 Plain Table 2;\lsdpriority43 \lsdlocked0 Plain Table 3;\lsdpriority44 \lsdlocked0 Plain Table 4;
+\lsdpriority45 \lsdlocked0 Plain Table 5;\lsdpriority40 \lsdlocked0 Grid Table Light;\lsdpriority46 \lsdlocked0 Grid Table 1 Light;\lsdpriority47 \lsdlocked0 Grid Table 2;\lsdpriority48 \lsdlocked0 Grid Table 3;\lsdpriority49 \lsdlocked0 Grid Table 4;
+\lsdpriority50 \lsdlocked0 Grid Table 5 Dark;\lsdpriority51 \lsdlocked0 Grid Table 6 Colorful;\lsdpriority52 \lsdlocked0 Grid Table 7 Colorful;\lsdpriority46 \lsdlocked0 Grid Table 1 Light Accent 1;\lsdpriority47 \lsdlocked0 Grid Table 2 Accent 1;
+\lsdpriority48 \lsdlocked0 Grid Table 3 Accent 1;\lsdpriority49 \lsdlocked0 Grid Table 4 Accent 1;\lsdpriority50 \lsdlocked0 Grid Table 5 Dark Accent 1;\lsdpriority51 \lsdlocked0 Grid Table 6 Colorful Accent 1;
+\lsdpriority52 \lsdlocked0 Grid Table 7 Colorful Accent 1;\lsdpriority46 \lsdlocked0 Grid Table 1 Light Accent 2;\lsdpriority47 \lsdlocked0 Grid Table 2 Accent 2;\lsdpriority48 \lsdlocked0 Grid Table 3 Accent 2;
+\lsdpriority49 \lsdlocked0 Grid Table 4 Accent 2;\lsdpriority50 \lsdlocked0 Grid Table 5 Dark Accent 2;\lsdpriority51 \lsdlocked0 Grid Table 6 Colorful Accent 2;\lsdpriority52 \lsdlocked0 Grid Table 7 Colorful Accent 2;
+\lsdpriority46 \lsdlocked0 Grid Table 1 Light Accent 3;\lsdpriority47 \lsdlocked0 Grid Table 2 Accent 3;\lsdpriority48 \lsdlocked0 Grid Table 3 Accent 3;\lsdpriority49 \lsdlocked0 Grid Table 4 Accent 3;
+\lsdpriority50 \lsdlocked0 Grid Table 5 Dark Accent 3;\lsdpriority51 \lsdlocked0 Grid Table 6 Colorful Accent 3;\lsdpriority52 \lsdlocked0 Grid Table 7 Colorful Accent 3;\lsdpriority46 \lsdlocked0 Grid Table 1 Light Accent 4;
+\lsdpriority47 \lsdlocked0 Grid Table 2 Accent 4;\lsdpriority48 \lsdlocked0 Grid Table 3 Accent 4;\lsdpriority49 \lsdlocked0 Grid Table 4 Accent 4;\lsdpriority50 \lsdlocked0 Grid Table 5 Dark Accent 4;
+\lsdpriority51 \lsdlocked0 Grid Table 6 Colorful Accent 4;\lsdpriority52 \lsdlocked0 Grid Table 7 Colorful Accent 4;\lsdpriority46 \lsdlocked0 Grid Table 1 Light Accent 5;\lsdpriority47 \lsdlocked0 Grid Table 2 Accent 5;
+\lsdpriority48 \lsdlocked0 Grid Table 3 Accent 5;\lsdpriority49 \lsdlocked0 Grid Table 4 Accent 5;\lsdpriority50 \lsdlocked0 Grid Table 5 Dark Accent 5;\lsdpriority51 \lsdlocked0 Grid Table 6 Colorful Accent 5;
+\lsdpriority52 \lsdlocked0 Grid Table 7 Colorful Accent 5;\lsdpriority46 \lsdlocked0 Grid Table 1 Light Accent 6;\lsdpriority47 \lsdlocked0 Grid Table 2 Accent 6;\lsdpriority48 \lsdlocked0 Grid Table 3 Accent 6;
+\lsdpriority49 \lsdlocked0 Grid Table 4 Accent 6;\lsdpriority50 \lsdlocked0 Grid Table 5 Dark Accent 6;\lsdpriority51 \lsdlocked0 Grid Table 6 Colorful Accent 6;\lsdpriority52 \lsdlocked0 Grid Table 7 Colorful Accent 6;
+\lsdpriority46 \lsdlocked0 List Table 1 Light;\lsdpriority47 \lsdlocked0 List Table 2;\lsdpriority48 \lsdlocked0 List Table 3;\lsdpriority49 \lsdlocked0 List Table 4;\lsdpriority50 \lsdlocked0 List Table 5 Dark;
+\lsdpriority51 \lsdlocked0 List Table 6 Colorful;\lsdpriority52 \lsdlocked0 List Table 7 Colorful;\lsdpriority46 \lsdlocked0 List Table 1 Light Accent 1;\lsdpriority47 \lsdlocked0 List Table 2 Accent 1;\lsdpriority48 \lsdlocked0 List Table 3 Accent 1;
+\lsdpriority49 \lsdlocked0 List Table 4 Accent 1;\lsdpriority50 \lsdlocked0 List Table 5 Dark Accent 1;\lsdpriority51 \lsdlocked0 List Table 6 Colorful Accent 1;\lsdpriority52 \lsdlocked0 List Table 7 Colorful Accent 1;
+\lsdpriority46 \lsdlocked0 List Table 1 Light Accent 2;\lsdpriority47 \lsdlocked0 List Table 2 Accent 2;\lsdpriority48 \lsdlocked0 List Table 3 Accent 2;\lsdpriority49 \lsdlocked0 List Table 4 Accent 2;
+\lsdpriority50 \lsdlocked0 List Table 5 Dark Accent 2;\lsdpriority51 \lsdlocked0 List Table 6 Colorful Accent 2;\lsdpriority52 \lsdlocked0 List Table 7 Colorful Accent 2;\lsdpriority46 \lsdlocked0 List Table 1 Light Accent 3;
+\lsdpriority47 \lsdlocked0 List Table 2 Accent 3;\lsdpriority48 \lsdlocked0 List Table 3 Accent 3;\lsdpriority49 \lsdlocked0 List Table 4 Accent 3;\lsdpriority50 \lsdlocked0 List Table 5 Dark Accent 3;
+\lsdpriority51 \lsdlocked0 List Table 6 Colorful Accent 3;\lsdpriority52 \lsdlocked0 List Table 7 Colorful Accent 3;\lsdpriority46 \lsdlocked0 List Table 1 Light Accent 4;\lsdpriority47 \lsdlocked0 List Table 2 Accent 4;
+\lsdpriority48 \lsdlocked0 List Table 3 Accent 4;\lsdpriority49 \lsdlocked0 List Table 4 Accent 4;\lsdpriority50 \lsdlocked0 List Table 5 Dark Accent 4;\lsdpriority51 \lsdlocked0 List Table 6 Colorful Accent 4;
+\lsdpriority52 \lsdlocked0 List Table 7 Colorful Accent 4;\lsdpriority46 \lsdlocked0 List Table 1 Light Accent 5;\lsdpriority47 \lsdlocked0 List Table 2 Accent 5;\lsdpriority48 \lsdlocked0 List Table 3 Accent 5;
+\lsdpriority49 \lsdlocked0 List Table 4 Accent 5;\lsdpriority50 \lsdlocked0 List Table 5 Dark Accent 5;\lsdpriority51 \lsdlocked0 List Table 6 Colorful Accent 5;\lsdpriority52 \lsdlocked0 List Table 7 Colorful Accent 5;
+\lsdpriority46 \lsdlocked0 List Table 1 Light Accent 6;\lsdpriority47 \lsdlocked0 List Table 2 Accent 6;\lsdpriority48 \lsdlocked0 List Table 3 Accent 6;\lsdpriority49 \lsdlocked0 List Table 4 Accent 6;
+\lsdpriority50 \lsdlocked0 List Table 5 Dark Accent 6;\lsdpriority51 \lsdlocked0 List Table 6 Colorful Accent 6;\lsdpriority52 \lsdlocked0 List Table 7 Colorful Accent 6;}}{\*\datastore 010500000200000018000000
+4d73786d6c322e534158584d4c5265616465722e362e3000000000000000000000060000
+d0cf11e0a1b11ae1000000000000000000000000000000003e000300feff090006000000000000000000000001000000010000000000000000100000feffffff00000000feffffff0000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffdfffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffff52006f006f007400200045006e00740072007900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000016000500ffffffffffffffffffffffff0c6ad98892f1d411a65f0040963251e5000000000000000000000000c00b
+57674875d401feffffff00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffff00000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffff000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000105000000000000}}
